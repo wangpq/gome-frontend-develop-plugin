@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>懒加载 lazyLoad</title>
+    <style>
+	ul,li{list-style:none;}
+    .aa{
+       height:600px;
+       background-color: #aaa;
+    }
+    .bb{
+       height:500px;
+       background-color: #00f;
+    }
+    .cc{
+       height:200px;
+       background-color: green;
+    }
+	
+	
+   .floor {
+		min-height: 480px;
+		_height: 480px;
+		_overflow: visible
+	}
+
+	.floor .fl_b a,.floor .fl_b a img {
+		display: inline-block;
+		width: 1200px;
+		height: 100px
+	}
+	.floor,.lazy-fn,.loading-sync {
+		background: url(//app.gomein.net.cn/gmlib/ui/loading/3.0.0/loading.gif) 50% 50% no-repeat
+	}
+
+	.floor-done,.lazy-fn-done {
+		background: 0 0
+	}
+	
+	.err-poster, .lazyloading {
+background: url(http://app.gomein.net.cn/gmlib/ui/loading/3.0.0/loading-sm.png) 50% 50% no-repeat;
+}
+    </style>
+</head>
+<body>
+    <div class="aa">AA</div>
+    <div class="bb">BB</div>
+    <div class="cc">CC</div>
+
+
+<div class="floor">
+<div class="mc_r">
+<ul class="mc_r_inner">
+    <li>
+        <a href="#">
+            <img class="lazyloading" data-lazy-init="http://gfs14.gomein.net.cn/T1zCCTBmJ_1RCvBVdK.jpeg" src="http://img.gomein.net.cn/images/grey.gif" data-lazyload-fn="0" data-lazy-img="0" alt="净水" title="" width="199" height="234" />
+		</a>
+    </li>
+    <li>
+        <a href="#">
+            <img class="lazyloading" src="http://img.gomein.net.cn/images/grey.gif"  data-lazy-init="http://gfs10.gomein.net.cn/T1McATB7dT1RCvBVdK.jpeg" data-lazy-img="0" alt="厨大-海尔" title="" width="199" height="234" />
+		</a>
+    </li>
+    <li>
+        <a href="#">
+            <img class="lazyloading" src="http://img.gomein.net.cn/images/grey.gif"  data-lazy-init="http://gfs14.gomein.net.cn/T10UYTBsZT1RCvBVdK.jpeg" data-lazy-img="0" alt="净化器" title="" width="199" height="234" />
+		</a>
+    </li>
+    <li>
+        <a href="#">
+            <img class="lazyloading"  src="http://img.gomein.net.cn/images/grey.gif" data-lazy-init="http://gfs14.gomein.net.cn/T1BcVTBvxT1RCvBVdK.jpeg" data-lazy-img="0" alt="厨大-能率" title="" width="199" height="234" />
+		</a>
+    </li>
+    <li>
+        <a href="#">
+            <img class="lazyloading"  src="http://img.gomein.net.cn/images/grey.gif"  data-lazy-init="http
+			://gfs10.gomein.net.cn/T1B6_TBTdT1RCvBVdK.jpeg" data-lazy-img="0" alt="苏泊尔" title="" width="199" height="234" />
+		</a>
+    </li>
+    <li>
+        <a href="#">
+            <img class="lazyloading" src="http://img.gomein.net.cn/images/grey.gif" data-lazy-init="http://gfs11.gomein.net.cn/T1WcbTBvdT1RCvBVdK.jpeg" data-lazy-img="0" alt="厨大-奥普" title="" width="199" height="234" />
+		</a>
+    </li>
+</ul>
+</div>
+</div>
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/gload/1.0.0/gload.js"></script>
+
+<script src="./js/lazyLoad.js"></script>
+<script>
+$('.mc_r_inner').gLoad(function () {
+	$(".mc_r_inner").lazyload({
+		source:"data-lazy-img"
+	})
+});
+
+</script>
+</body>
+</html>  

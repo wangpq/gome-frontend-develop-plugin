@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>widget</title>
+</head>
+<body>
+	<select name="" id=""></select><select name="" id=""></select>
+	<button id="open">
+		打开蒙层，点击蒙层可关闭
+	</button>
+
+	<button id="open2">
+		另一种打开方式， 3秒后关闭
+	</button>
+<pre> 
+</pre>
+	a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br><select name="" id=""></select>
+	<script src="/??gmlib/jq/1.7.1/jquery.min.js,gmlib/ui/gmodal/1.0.0/gModal.min.js"></script>
+	<script>
+	var modal = $.gModal().on('click', function(){ 
+		this.hide(); 
+	});
+	$('#open').on('click', function(){
+		modal.show();
+	});
+
+
+	$('#open2').on('click', function(){
+		var $this = $(this);
+		$this.gModal();
+
+		setTimeout(function(){
+			$this.gModal(false);
+		}, 3000)
+	}); 
+	</script>
+</body>
+</html>

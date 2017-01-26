@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>多图滚动 gscroll</title>
+    <style>
+        .demo {width:160px;height:40px;overflow:hidden;}
+        .demo ul {position:absolute;top:0;margin:0;padding:0;}
+        .demo li {float:left;display:inline;width:160px;height:40px;}
+        .btn a {display:inline-block;border:1px solid #ccc;padding:2px;margin-left:20px;color:#333;width:50px;text-align:center;text-decoration: none;}
+    </style>
+</head>
+<body>
+<div class="demo">
+    <ul>
+        <li><a href="###"><img src="http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201510/20151022/购物车下小家电10.24和10.26.jpg" /></a></li>
+        <li><a href="###"><img src="http://img.gomein.net.cn/images/grey.gif" gome-src="http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201510/20151023/购物车电视10.26.jpg" /></a></li>
+        <li><a href="###"><img src="http://img.gomein.net.cn/images/grey.gif" gome-src="http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201510/20151022/购物车下10.26-10.28.gif" /></a></li>
+        <li><a href="###"><img src="http://img.gomein.net.cn/images/grey.gif" gome-src="http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201510/20151023/购物车下美的10.26.jpg" /></a></li>
+    </ul>
+</div>
+<div class="btn">
+    <a class="up" href="javascript:void(0);">向上</a>
+    <a class="down" href="javascript:void(0);">向下</a>
+</div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/gscroll/1.0.0/gscroll.js"></script>
+<script>
+$('.demo').gScroll({
+    isAuto: true, // 是否自动滚动
+    isImgLoad: true,  // 是否图片后加载
+    showNum: 1,  // 显示个数
+    showNum: 1, // 显示个数
+    stepLen: 1, // 每次滚动步长
+    speed: 2000,  // 间隔时间（毫秒）
+    type: 'vertical',  // 水平滚动 - horizontal / 垂直滚动 - vertical
+    direction: 'backward',  // 向前 -  forward / 向后 - backward
+    dataOriginal: 'gome-src',  // 图片存储属性名
+    btnGo: {left:'.up',right:'.down'},
+    beforeCallback: function(){},
+    afterCallback: function(){}
+});
+</script>
+</body>
+</html>  

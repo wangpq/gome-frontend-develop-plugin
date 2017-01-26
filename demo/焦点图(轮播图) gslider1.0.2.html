@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>焦点图(轮播图) gslider1.0.2</title>
+    <style>
+        /*-- example-01 --*/
+        .example01{position:relative;width:250px;height:150px;overflow:hidden;margin:10px;float:left;}
+        .example01-btn{position:absolute;left:10px;width:57px;height:57px;top:50%;margin-top:-28px;cursor:pointer;z-index: 1;}
+        .example01-btn:hover .btn-bg{opacity:.4;filter:Alpha(opacity=40);}
+        .example01-btn-right{left:auto;right:10px;}
+        .example01-btn .btn-bg{display: inline-block;position:absolute;width:57px;height:57px;cursor:pointer;background:#000;opacity:.2;filter:Alpha(opacity=20);z-index: 2;}
+        .example01-btn .arrow{display:inline-block;position:absolute;width:15px;left:21px;top:15px;height:29px;background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider.png) -25px -15px no-repeat;_background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider_.png) -25px -15px no-repeat;z-index: 3;}
+        .example01-btn-right .arrow{background-position:-87px -15px;}
+        .example01-index{width:100%;position:absolute;bottom:10px;text-align:center;}
+        .example01-index div{display:inline-block;*display:inline;*zoom:1;cursor:pointer;background:#ccc;margin:5px;width:10px;height:10px;border-radius:10px;overflow:hidden;vertical-align: middle;}
+        .example01-index div.example01-index-active{background:#c00;}
+
+        /*-- example-02 --*/
+        .example02{position:relative;width:250px;height:150px;overflow:hidden;margin:10px;float:left;}
+        .example02-btn{position:absolute;left:10px;width:57px;height:57px;top:50%;margin-top:-28px;cursor:pointer;z-index: 1;}
+        .example02-btn:hover .btn-bg{opacity:.4;filter:Alpha(opacity=40);}
+        .example02-btn-right{left:auto;right:10px;}
+        .example02-btn .btn-bg{display: inline-block;position:absolute;width:57px;height:57px;cursor:pointer;background:#000;opacity:.2;filter:Alpha(opacity=20);z-index: 2;}
+        .example02-btn .arrow{display:inline-block;position:absolute;width:15px;left:21px;top:15px;height:29px;background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider.png) -25px -15px no-repeat;_background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider_.png) -25px -15px no-repeat;z-index: 3;}
+        .example02-btn-right .arrow{background-position:-87px -15px;}
+        .example02-index{width:100%;position:absolute;bottom:10px;text-align:center;}
+        .example02-index div{display:inline-block;*display:inline;*zoom:1;cursor:pointer;background:#ccc;border-radius:0px;margin:0 2px 0 1px;width: 28px;height: 6px;overflow:hidden;vertical-align: middle;}
+        .example02-index div.example02-index-active{background:#c00;}
+
+        /*-- example-03 --*/
+        .example03{position:relative;width:250px;height:150px;overflow:hidden;margin:10px;float:left;}
+        .example03-btn{position:absolute;left:10px;width:50px;height:104px;top:50%;margin-top:-52px;cursor:pointer;z-index: 1;}
+        .example03-btn:hover .btn-bg{opacity:.3;filter:Alpha(opacity=30);}
+        .example03-btn-right{left:auto;right:10px;}
+        .example03-btn .btn-bg{display: inline-block;position:absolute;width:50px;height:104px;cursor:pointer;background:#000;opacity:.1;filter:Alpha(opacity=10);z-index: 2;}
+        .example03-btn .arrow{display:inline-block;position:absolute;width:25px;height:57px;left:12px; top:24px;background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider.png) -139px -25px no-repeat;_background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider_.png) -139px -25px no-repeat;z-index: 3;}
+        .example03-btn-right .arrow{background-position:-200px -25px;}
+        .example03-index{width:100%;position:absolute;bottom:10px;text-align:center;}
+        .example03-index div{display: inline-block;*display: inline;*zoom: 1;cursor: pointer;background: #cccccc;margin: 5px;width: 10px;height: 10px;overflow: hidden;border-radius:10px;vertical-align: middle;}
+        .example03-index div.example03-index-active{background:#c00;}
+
+        /*-- example-04 --*/
+        .example04{position:relative;width:250px;height:150px;overflow:hidden;margin:10px;float:left;}
+        .example04-btn{position:absolute;left:10px;width:50px;height:104px;top:50%;margin-top:-52px;cursor:pointer;z-index: 1;}
+        .example04-btn:hover .btn-bg{opacity:.3;filter:Alpha(opacity=30);}
+        .example04-btn-right{left:auto;right:10px;}
+        .example04-btn .btn-bg{display: inline-block;position:absolute;width:50px;height:104px;cursor:pointer;background:#000;opacity:.1;filter:Alpha(opacity=10);z-index: 2;}
+        .example04-btn .arrow{display:inline-block;position:absolute;width:25px;height:57px;left:12px; top:24px;background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider.png) -139px -25px no-repeat;_background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider_.png) -139px -25px no-repeat;z-index: 3;}
+        .example04-btn-right .arrow{background-position:-200px -25px;}
+        .example04-index{width:100%;position:absolute;bottom:10px;text-align:center;}
+        .example04-index div{display:inline-block;*display:inline;*zoom:1;cursor:pointer;background:#ccc;border-radius:0px;margin:0 2px 0 1px;width: 28px;height: 6px;overflow:hidden;vertical-align: middle;}
+        .example04-index div.example04-index-active{background:#c00;}
+
+        /*-- example-05 --*/
+        .example05{position:relative;width:250px;height:150px;overflow:hidden;margin:10px;float:left;}
+        .example05-btn{position:absolute;left:10px;width:57px;height:57px;top:50%;margin-top:-28px;cursor:pointer;z-index: 1;}
+        .example05-btn:hover .arrow{background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider.png) -19px -135px no-repeat;_background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider_.png) -19px -135px no-repeat;}
+        .example05-btn-right:hover .arrow{background-position:-85px -135px;}
+        .example05-btn-right{left:auto;right:10px;}
+        .example05-btn .btn-bg{display: inline-block;position:absolute;width:57px;height:57px;cursor:pointer;z-index: 2;}
+        .example05-btn .arrow{display:inline-block;position:absolute;width:15px;left:21px;top:15px;height:29px;background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider.png) -17px -80px no-repeat;_background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider_.png) -17px -80px no-repeat;z-index: 3;}
+        .example05-btn-right .arrow{background-position:-87px -80px;}
+        .example05-index{width:100%;position:absolute;bottom:9px;text-align:center;}
+        .example05-index div{display: inline-block;*display: inline;*zoom: 1;cursor: pointer;background: #cccccc;margin:0 3px 0 2px;width: 5px;height: 5px;overflow: hidden;border-radius:5px;vertical-align: middle;}
+        .example05-index div.example05-index-active{background:#c00;}
+
+        /*-- example-06 --*/
+        .example06{position:relative;width:250px;height:150px;overflow:hidden;margin:10px;float:left;}
+        .example06-btn{position:absolute;left:10px;width: 43px;height: 43px;top:50%;margin-top:-21px;cursor:pointer;z-index: 1;}
+        .example06-btn:hover .btn-bg{background:#c00;opacity:.8;filter:Alpha(opacity=80);}
+        .example06-btn-right{left:auto;right:10px;}
+        .example06-btn .btn-bg{display: inline-block;position:absolute;width: 43px;height: 43px;cursor:pointer;background:#000;opacity:.1;filter:Alpha(opacity=10);z-index: 2;}
+        .example06-btn .arrow{display:inline-block;position:absolute;width: 13px;height: 16px;position:absolute;left:15px;top:14px;background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider.png) -145px -142px no-repeat;_background:url(http://css.atguat.com.cn/gmlib/ui/gslider/1.0.2/gslider_.png) -145px -142px no-repeat;z-index: 3;}
+        .example06-btn-right .arrow{background-position:-206px -142px;}
+        .example06-index{width:100%;position:absolute;bottom:9px;text-align:center;}
+        .example06-index div{display: inline-block;*display: inline;*zoom: 1;cursor: pointer;background: #cccccc;margin:0 3px 0 2px;width: 5px;height: 5px;overflow: hidden;border-radius: 5px;vertical-align: middle;}
+        .example06-index div.example06-index-active{background:#c00;}
+    </style>
+</head>
+<body>
+<div class="example01" id="e1">
+    <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a37844d5cdef76093c5ecadf48e097fe/562c11dfa9ec8a13ccab17a8f103918fa1ecc0c1.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=5b2d56d8cb11728b3078df62aec1f7fc/7dd98d1001e93901ab1254777dec54e736d19663.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=fddf025dbe99a9013b6008767ba83e49/8694a4c27d1ed21bec1bf0acab6eddc450da3fad.jpg" alt="">
+
+</div>
+<div class="example02" id="e2">
+    <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a37844d5cdef76093c5ecadf48e097fe/562c11dfa9ec8a13ccab17a8f103918fa1ecc0c1.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=5b2d56d8cb11728b3078df62aec1f7fc/7dd98d1001e93901ab1254777dec54e736d19663.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=fddf025dbe99a9013b6008767ba83e49/8694a4c27d1ed21bec1bf0acab6eddc450da3fad.jpg" alt="">
+</div>
+<div class="example03" id="e3">
+    <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a37844d5cdef76093c5ecadf48e097fe/562c11dfa9ec8a13ccab17a8f103918fa1ecc0c1.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=5b2d56d8cb11728b3078df62aec1f7fc/7dd98d1001e93901ab1254777dec54e736d19663.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=fddf025dbe99a9013b6008767ba83e49/8694a4c27d1ed21bec1bf0acab6eddc450da3fad.jpg" alt="">
+</div>
+
+<div class="example04" id="e4">
+    <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a37844d5cdef76093c5ecadf48e097fe/562c11dfa9ec8a13ccab17a8f103918fa1ecc0c1.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=5b2d56d8cb11728b3078df62aec1f7fc/7dd98d1001e93901ab1254777dec54e736d19663.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=fddf025dbe99a9013b6008767ba83e49/8694a4c27d1ed21bec1bf0acab6eddc450da3fad.jpg" alt="">
+</div>
+<div class="example05" id="e5">
+    <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a37844d5cdef76093c5ecadf48e097fe/562c11dfa9ec8a13ccab17a8f103918fa1ecc0c1.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=5b2d56d8cb11728b3078df62aec1f7fc/7dd98d1001e93901ab1254777dec54e736d19663.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=fddf025dbe99a9013b6008767ba83e49/8694a4c27d1ed21bec1bf0acab6eddc450da3fad.jpg" alt="">
+</div>
+
+<div class="example06" id="e6">
+    <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a37844d5cdef76093c5ecadf48e097fe/562c11dfa9ec8a13ccab17a8f103918fa1ecc0c1.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=5b2d56d8cb11728b3078df62aec1f7fc/7dd98d1001e93901ab1254777dec54e736d19663.jpg" alt="">
+    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=fddf025dbe99a9013b6008767ba83e49/8694a4c27d1ed21bec1bf0acab6eddc450da3fad.jpg" alt="">
+</div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/gslider/1.0.2/gslider.js"></script>
+<script>
+    $('#e1').gSlider({
+        type:'slideLeft',
+        delayTime:5000,
+        animateTime:500,
+        control:{
+            index:{
+                className:'example01-index'
+                ,activeClassName:'example01-index-active'
+                ,event:'click'
+            },
+            side:{
+                className:'example01-btn',
+                prev:{
+                    className:'example01-btn-left',
+                    html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                },
+                next:{
+                    className:'example01-btn-right',
+                    html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                }
+            }
+        }
+    });
+
+    $('#e2').gSlider({
+        type:'fadeIn'
+        ,delayTime:5000
+        ,animateTime:500
+        ,control:{
+            index:{
+                className:'example02-index'
+                ,activeClassName:'example02-index-active'
+                ,event:'click'
+            }
+            ,side:{
+                className:'example02-btn'
+                ,prev:{
+                    className:'example02-btn-left'
+                    ,html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                }
+                ,next:{
+                    className:'example02-btn-right'
+                    ,html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                }
+            }
+        }
+    });
+
+
+    $('#e3').gSlider({
+        type:'fadeIn'
+        ,delayTime:5000
+        ,animateTime:500
+        ,control:{
+            index:{
+                className:'example03-index'
+                ,activeClassName:'example03-index-active'
+                ,event:'click'
+            }
+            ,side:{
+                className:'example03-btn'
+                ,prev:{
+                    className:'example03-btn-left'
+                    ,html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                }
+                ,next:{
+                    className:'example03-btn-right'
+                    ,html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                }
+            }
+        }
+    });
+
+
+    $('#e4').gSlider({
+        type:'fadeIn'
+        ,delayTime:5000
+        ,animateTime:500
+        ,control:{
+            index:{
+                className:'example04-index'
+                ,activeClassName:'example04-index-active'
+                ,event:'click'
+            }
+            ,side:{
+                className:'example04-btn'
+                ,prev:{
+                    className:'example04-btn-left'
+                    ,html:'<div onselectstart="return false"><span class="btn-bg" ></span><span class="arrow"></span></div>'
+                }
+                ,next:{
+                    className:'example04-btn-right'
+                    ,html:'<div onselectstart="return false"><span class="btn-bg" ></span><span class="arrow"></span></div>'
+                }
+            }
+        }
+    });
+    $('#e5').gSlider({
+        type:'fadeIn'
+        ,delayTime:5000
+        ,animateTime:500
+        ,control:{
+            index:{
+                className:'example05-index'
+                ,activeClassName:'example05-index-active'
+                ,event:'click'
+            }
+            ,side:{
+                className:'example05-btn'
+                ,prev:{
+                    className:'example05-btn-left'
+                    ,html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                }
+                ,next:{
+                    className:'example05-btn-right'
+                    ,html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                }
+            }
+        }
+    });
+    $('#e6').gSlider({
+        type:'fadeIn'
+        ,delayTime:5000
+        ,animateTime:500
+        ,control:{
+            index:{
+                className:'example06-index'
+                ,activeClassName:'example06-index-active'
+                ,event:'click'
+            }
+            ,side:{
+                className:'example06-btn'
+                ,prev:{
+                    className:'example06-btn-left'
+                    ,html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                }
+                ,next:{
+                    className:'example06-btn-right'
+                    ,html:'<span class="btn-bg"></span><span class="arrow"></span>'
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>  

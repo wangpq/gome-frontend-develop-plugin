@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>滚动监听 scrollspy</title>
+    <style>
+    .aa{
+       height:600px;
+       background-color: #ddd;
+    }
+    .bb{
+       height:500px;
+       background-color: #bbb;
+    }
+    .cc{
+       height:200px;
+       background-color: #aaa;
+    }
+    </style>
+</head>
+<body>
+    <div class="aa">AA</div>
+    <div class="bb">BB</div>
+    <div class="cc">CC</div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/gload/1.0.0/gload.js"></script>
+<script>
+$('.cc').gLoad(function () {
+    alert("我是cc，测试gload");
+    $('.cc').html("我是cc，测试gload");
+});
+</script>
+</body>
+</html>  

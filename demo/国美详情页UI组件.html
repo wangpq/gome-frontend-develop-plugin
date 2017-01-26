@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>国美详情页UI组件</title>
+	<link rel="stylesheet" href="../gmlib/reset/1.1.0/reset.css" />
+    <style type="text/css">
+
+	.wbox {
+		width: 1200px;
+		margin: 0 auto
+	}
+	.dt-side {
+		width: 210px;
+		float: left;
+		display: _inline
+	}
+	.dt-main {
+		width: 980px;
+		float: right;
+		display: _inline
+	}
+
+
+
+	.panel-box {
+		width: 208px;
+		border: 1px solid #eee;
+		margin-bottom: 10px
+	}
+	.panel-box.rcview {
+		width: 208px;
+		float: left;
+		display: _inline;
+	}
+	.panel-box .panel-hd,
+	.panel-box .panel-titblank {
+		height: 36px;
+		padding-left: 10px;
+		color: #666;
+		font: 600 12px/36px 'microsoft yahei';
+		background: #f6f6f6
+	}
+	.panel-hd:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden
+	}
+	.panel-box .panel-sbbox {
+		padding: 8px 15px 0
+	}
+	.panel-box .panel-bd .nav{
+		padding: 15px 10px 5px 10px
+	}
+	.panel-box .panel-sbbox .nav a {
+		display: inline-block;
+		margin-bottom: 10px;
+		height: 15px;
+		line-height: 15px;
+		overflow: hidden
+	}
+	.panel-box .panel-bd .nav a {
+		height: 24px;
+		line-height: 24px;
+		width: 75px;
+		display: inline-block;
+		overflow: hidden;
+		margin-right: 10px;
+		color: #666
+	}
+	.panel-box .panel-bd .nav a:hover {
+		color: #e3101e
+	}
+	.panel-box .panel-bd .nav a.cur {
+		color: #e3101e;
+		text-decoration: underline
+	}
+	.panel-box .panel-bd .nav a.active {
+		background-color: #eef1ff;
+		margin: 0 10px 5px 0;
+		padding: 0 4px;
+		width: auto
+	}
+	.panel-box .panel-sbbox a {
+		width: 59px
+	}
+
+
+
+	.panel-list {
+		padding: 15px 10px
+	}
+	.panel-list li {
+		vertical-align: bottom;
+		text-align: center;
+		margin-top: -1px
+	}
+	.panel-list li h2 {
+		color: #666;
+		font-family: "新宋";
+		text-align: left;
+		word-break: break-all;
+		height: 36px;
+		overflow: hidden;
+		margin: 5px auto
+	}
+	.panel-list li a:hover .text,
+	.panel-list li a:hover,
+	.panel-list li h2:hover {
+		text-decoration: underline;
+		color: #e3101e
+	}
+	.panel-list li p {
+		font-weight: 400;
+		font-size: 18px;
+		text-align: left;
+		font-family: arial;
+		margin-top: 7px
+	}
+	.panel-list li p.price {
+		color: #e3101e;
+		font-family: arial;
+	}
+	.panel-list li a .text {
+		color: #666;
+		font-family: "新宋";
+		height: 40px;
+		line-height: 20px;
+		overflow: hidden;
+		text-align: left;
+	}
+
+
+	.panel-tab-hd {
+		margin-top: 10px;
+		width: 190px;
+		height: 30px;
+		line-height: 30px;
+		position: relative;
+		border-bottom: 1px solid #ccc;
+		background: #f3f3f3
+	}
+
+	.panel-tab-hd a {
+		width: 60px;
+		display: inline-block;
+		text-align: center;
+		font-family: "microsoft yahei";
+		color: #666
+	}
+
+	.panel-tab-hd a.cur {
+		font-family: "microsoft yahei";
+		color: #e3101e;
+		text-decoration: none;
+		font-weight: 600;
+		border: 1px solid #ccc;
+		background: #fff
+	}
+
+	.panel-tab-bd {
+		margin-top: -2px;
+		overflow: hidden;
+		position: relative;
+		min-height: 426px
+	}
+	.panel-tab .flag_active {
+		top: 29px;
+		position: absolute;
+		height: 0;
+		line-height: 0;
+		font-size: 0;
+		overflow: hidden;
+		width: 62px;
+		left: 0;
+	}
+	.panel-tab .temp_1 {
+		height: 6px;
+		position: relative;
+		z-index: 1;
+		background: #fff;
+	}
+	.panel-tab .liners {
+		position: absolute;
+		color: #ccc;
+	}
+	.panel-tab .dn{
+		display:none;
+	}
+
+
+	.tonglei_ul {
+		display: none
+	}
+
+	.tonglei_ul li {
+		position: relative;
+		padding: 10px 0;
+		border-top: 1px solid #eee;
+		height: 50px
+	}
+
+	.tonglei_ul .tonglei_link {
+		width: 96px;
+		margin-left: 82px;
+		line-height: 18px
+	}
+
+	.tonglei_ul .tonglei_link_name {
+		height: 36px;
+		overflow: hidden
+	}
+
+	.tonglei_ul .tonglei_link_name a {
+		font-family: "microsoft yahei";
+		color: #404040;
+		text-decoration: none;
+		cursor: pointer;
+		outline: 0;
+		font-weight: 400;
+	}
+
+	.tonglei_ul .tonglei_sz {
+		width: 12px;
+		height: 12px;
+		line-height: 12px;
+		background: #fff;
+		text-align: center;
+		font-size: 10px;
+		color: #E20F20;
+		position: absolute;
+		border: 1px solid #DDD;
+		top: 10px;
+		left: 0
+	}
+
+	.tonglei_ul .tonglei_img {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 10px;
+		left: 22px
+	}
+
+	.tonglei_ul .tonglei_jg_val {
+		font-family: Arial;
+		color: #e3101e;
+		font-weight: 700
+	}
+
+	</style>
+</head>
+<body>
+<div class="wbox" style="margin-top:20px;">
+    <div class="dt-side">
+
+		<div class="panel-box" id="relativeSort">
+			<h2 class="panel-hd">
+				相关分类
+			</h2>
+			<div class="panel-bd">
+			    <div class="nav">
+					<a href="//list.gome.com.cn/cat10000093.html" title="台式主机" target="_blank">
+						台式主机
+					</a>
+					<a href="//list.gome.com.cn/cat10005442.html" title="超极本" target="_blank">
+						超极本
+					</a>
+					<a href="//list.gome.com.cn/cat10000099.html" title="一体机" target="_blank">
+						一体机
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="panel-box" id="lookToBuy">
+			<h2 class="panel-hd">
+				浏览最终购买
+			</h2>
+			<div class="panel-bd">
+				<ul class="panel-list">
+					<li>
+						<a href="http://item.gome.com.cn/9134560681-1123500769.html?intcmp=box13-50-1_1_1491206383"
+						target="_blank" title="戴尔（DELL）灵越新飞匣15ER-3525B 15.6英寸笔记本电脑（第七代i5-7200U 4G 500G R5 M315 2G独显 无光驱 Win10含Office家庭版和学生版2016）黑色"
+						maima_param="click|1491206383|box13|8|9134560681|1|0|0|0|0|0|0|0|50|1|0|0|0">
+							<img width="160" height="160" src="http://gfs4.gomein.net.cn/T1OCATByYv1RCvBVdK_160.jpg"
+							alt="戴尔（DELL）灵越新飞匣15ER-3525B 15.6英寸笔记本电脑（第七代i5-7200U 4G 500G R5 M315 2G独显 无光驱 Win10含Office家庭版和学生版2016）黑色">
+							<p class="price">¥<span>3499.00</span>
+							</p>
+							<div class="text">
+								戴尔（DELL）灵越新飞匣15ER-3525B 15.6英寸笔记本电脑（第七代i5-7200U 4G 500G R5 M315 2G独显 无光驱
+								Win10含Office家庭版和学生版2016）黑色
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="panel-box" id="paiHangBang">
+			<h2 class="panel-hd">
+				排行榜
+			</h2>
+			<div class="panel-bd">
+				<div class="panel-tab" style="margin:10px;">
+				
+				<div id="panel-tab-hd" class="panel-tab-hd">
+					<a href="javascript:;" class="cur">同价位</a>
+					<i class="liners dn"> | </i>
+					<a href="javascript:;">同品牌</a>
+					<i class="liners"> | </i>
+					<a href="javascript:;">同类别</a>
+					<div class="flag_active"></div>
+				</div>
+				<div class="temp_1"></div>
+                <div class="panel-tab-bd">
+					<ul class="tonglei_ul" style="display: block;">
+						<li>
+							<div class="tonglei_sz">1</div>
+							<div class="tonglei_img">
+								<a target="_blank" href="http://item.gome.com.cn/9134080855-1123260387.html"
+								title="Apple MacBook Air 13.3英寸笔记本电脑（i5/8G/128G/太空银）MMGF2CH/A"
+								maima_param="click|1365584627|box09|1|9134080855|0|0|0|0|0|0|1|9|25|0|16|0|0">
+									<img src="http://gfs.gomein.net.cn/T15oJTBgbv1RCvBVdK_100.jpg" width="50" height="50">
+								</a>
+							</div>
+							<div class="tonglei_link">
+								<p class="tonglei_link_name">
+									<a target="_blank" href="http://item.gome.com.cn/9134080855-1123260387.html"
+									maima_param="click|1365584627|box09|1|9134080855|0|0|0|0|0|0|1|9|25|0|16|0|0">
+										Apple MacBook Air 13.3英寸笔记本电脑（i5/8G/128G/太空银）MMGF2CH/A
+									</a>
+								</p>
+								<p class="tonglei_jg">
+									<span class="tonglei_jg_val">¥3799.00</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="tonglei_sz">2</div>
+							<div class="tonglei_img">
+								<a target="_blank" href="http://item.gome.com.cn/9134080855-1123260387.html"
+								title="【自营】联想（Lenovo）天逸310 15.6英寸笔记本电脑【第六代英特尔酷睿i5-6200U 4G 500G   升级至R5 M430 2G显存   DVD刻录  win10  正版office】黑色"
+								maima_param="click|1365584627|box09|1|9134080855|0|0|0|0|0|0|1|9|25|0|16|0|0">
+									<img src="http://gfs.gomein.net.cn/T15oJTBgbv1RCvBVdK_100.jpg" width="50" height="50">
+								</a>
+							</div>
+							<div class="tonglei_link">
+								<p class="tonglei_link_name">
+									<a target="_blank" href="http://item.gome.com.cn/9134080855-1123260387.html"
+									maima_param="click|1365584627|box09|1|9134080855|0|0|0|0|0|0|1|9|25|0|16|0|0">
+										【自营】联想（Lenovo）天逸310 15.6英寸笔记本电脑【第六代英特尔酷睿i5-6200U 4G 500G 升级至R5 M430 2G显存
+										DVD刻录 win10 正版office】黑色
+									</a>
+								</p>
+								<p class="tonglei_jg">
+									<span class="tonglei_jg_val">¥3799.00</span>
+								</p>
+							</div>
+						</li>	
+					</ul>
+					<ul class="tonglei_ul">
+						<li>
+							<div class="tonglei_sz">1</div>
+							<div class="tonglei_img">
+								<a target="_blank" href="http://item.gome.com.cn/9134080855-1123260387.html"
+								title="【自营】联想（Lenovo）天逸310 15.6英寸笔记本电脑【第六代英特尔酷睿i5-6200U 4G 500G   升级至R5 M430 2G显存   DVD刻录  win10  正版office】黑色"
+								maima_param="click|1365584627|box09|1|9134080855|0|0|0|0|0|0|1|9|25|0|16|0|0">
+									<img src="http://gfs.gomein.net.cn/T15oJTBgbv1RCvBVdK_100.jpg" width="50" height="50">
+								</a>
+							</div>
+							<div class="tonglei_link">
+								<p class="tonglei_link_name">
+									<a target="_blank" href="http://item.gome.com.cn/9134080855-1123260387.html"
+									maima_param="click|1365584627|box09|1|9134080855|0|0|0|0|0|0|1|9|25|0|16|0|0">
+										【第六代英特尔酷睿i5-6200U 4G 500G 升级至R5 M430 2G显存
+									</a>
+								</p>
+								<p class="tonglei_jg">
+									<span class="tonglei_jg_val">¥3799.00</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+					<ul class="tonglei_ul">
+						<li>
+							<div class="tonglei_sz">1</div>
+							<div class="tonglei_img">
+								<a target="_blank" href="http://item.gome.com.cn/9134080855-1123260387.html"
+								title="【自营】联想（Lenovo）天逸310 15.6英寸笔记本电脑【第六代英特尔酷睿i5-6200U 4G 500G   升级至R5 M430 2G显存   DVD刻录  win10  正版office】黑色"
+								maima_param="click|1365584627|box09|1|9134080855|0|0|0|0|0|0|1|9|25|0|16|0|0">
+									<img src="http://gfs.gomein.net.cn/T15oJTBgbv1RCvBVdK_100.jpg" width="50" height="50">
+								</a>
+							</div>
+							<div class="tonglei_link">
+								<p class="tonglei_link_name">
+									<a target="_blank" href="http://item.gome.com.cn/9134080855-1123260387.html"
+									maima_param="click|1365584627|box09|1|9134080855|0|0|0|0|0|0|1|9|25|0|16|0|0">
+										天逸310 15.6英寸笔记本电脑
+									</a>
+								</p>
+								<p class="tonglei_jg">
+									<span class="tonglei_jg_val">¥3799.00</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+			
+		</div>
+		
+
+	</div>
+	<div class="dt-main">
+       右侧内容
+	</div>
+</div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+
+</body>
+</html>  

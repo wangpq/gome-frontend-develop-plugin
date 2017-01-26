@@ -1,0 +1,533 @@
+@charset "utf-8";
+.floor {
+	width:1200px;
+	margin:0 auto;
+	min-height: 480px;
+	_height: 480px;
+	_overflow: visible
+}
+
+.floor .mt {
+	height: 38px;
+	padding-top: 32px
+}
+
+.floor .mtTop {
+	width: 210px;
+	height: 38px;
+	overflow: hidden;
+	float: left;
+	line-height: 38px;
+	font-size: 20px
+}
+
+.floor .h2_text {
+	float: left;
+	padding-right: 6px
+}
+
+.floor .mtTop h2 {
+	font-weight: 500
+}
+
+.floor .tab {
+	float: right;
+	margin-top: 8px;
+	max-width: 790px;
+	height: 30px;
+	overflow: hidden;
+	position: relative
+}
+
+.floor .tab li {
+	float: left
+}
+
+.floor .tab li a {
+	font-size: 14px;
+	color: #5e5e5e;
+	padding: 0 15px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	_white-space: nowrap
+}
+
+.floor .tab li a:hover {
+	text-decoration:none;
+}
+
+.floor .tab li.cur a {
+	color: #fff;
+	background: rgb(187, 129, 223)
+}
+
+.floor .mc {
+	height: 470px
+}
+
+.floor .mc_l {
+	height: 470px;
+	width: 210px;
+	float: left;
+	position: relative
+}
+
+.floor .mc_l_img {
+	display: block;
+	background: #fff
+}
+
+.floor .mc_l img {
+	margin-left: -10px;
+	display: block;
+	width: 220px;
+	height: 278px
+}
+
+.floor .keyAll {
+	height: auto;
+	width: 210px;
+	position: absolute;
+	left: 0;
+	bottom: 0
+}
+
+.floor .channel {
+	width: 210px;
+	margin-left: 10px;
+	min-height: 32px
+}
+
+.floor .channelbg {
+	max-height: 98px;
+	width: 220px;
+	position: absolute;
+	left: -10px;
+	bottom: 160px;
+	background: #fff;
+	overflow: hidden
+}
+
+.floor .channel_inner {
+	width: 180px;
+	margin-left: 15px;
+	margin-right: 15px;
+	overflow: hidden
+}
+
+.floor .channel li {
+	width: 180px;
+	height: 32px;
+	line-height: 32px;
+	*height: 30px;
+	*line-height: 34px;
+	*margin-top: -2px;
+	overflow: hidden
+}
+
+.floor .channel li.line {
+	width: 180px;
+	height: 1px;
+	line-height: 1px;
+	background: #fff;
+	font-size: 0;
+	opacity: .1;
+	filter: Alpha(opacity=10)
+}
+
+.floor .channel a,.floor .channel span {
+	display: inline-block;
+	font-size: 14px;
+	color: #f0f0f0;
+	float: left
+}
+
+.floor .channel a {
+	height: 23px;
+	height: 24px\9;
+	*height: 25px
+}
+
+.floor .channel a:hover {
+	border-bottom: 1px solid #fff
+}
+
+.floor .channel span {
+	padding: 0 5px
+}
+
+.floor .keywords {
+	height: 160px;
+	width: 210px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden
+}
+
+.floor .keywords .w55 {
+	height: 137px;
+	width: 50px;
+	float: left;
+	overflow: hidden;
+	margin: 8px 0 15px 15px
+}
+
+.floor .keywords .w43,.floor .keywords .w62 {
+	height: 137px;
+	width: 37px;
+	float: left;
+	overflow: hidden;
+	margin: 8px 0 15px 10px
+}
+
+.floor .keywords .w62 {
+	width: 73px;
+	margin: 8px 15px 15px 10px
+}
+
+.floor .keywords li {
+	height: 28px;
+	line-height: 28px;
+	*height: 26px;
+	*line-height: 28px;
+	*margin-top: -2px;
+	overflow: hidden
+}
+
+.floor .keywords li a {
+	display: inline-block;
+	color: #f0f0f0;
+	height: 20px;
+	*height: 22px;
+	font-size: 12px
+}
+
+.floor .keywords li.cu a {
+	font-weight: 700
+}
+
+.floor .keywords li a:hover {
+	border-bottom: 1px solid #fff
+}
+
+.floor .main_warp {
+	width: 990px;
+	height: 470px;
+	float: left;
+	position: relative;
+	overflow: hidden
+}
+
+.floor .main {
+	width: 990px;
+	height: 470px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+	display: none
+}
+
+.floor .main_inner li {
+	width: 198px;
+	height: 235px;
+	float: left;
+	overflow: hidden
+}
+
+.floor .main_inner li a {
+	width: 197px;
+	height: 234px;
+	display: block;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	overflow: hidden
+}
+
+.floor .main_inner li img {
+	display: block;
+	width: 130px;
+	height: 130px;
+	margin: 20px 0 15px 34px;
+	*margin-bottom: 9px
+}
+
+.floor .main_inner li .p_name,.floor .main_inner li .p_price {
+	width: 157px;
+	height: 36px;
+	margin-left: 20px;
+	overflow: hidden;
+	line-height: 18px;
+	font-size: 12px;
+	color: #5e5e5e
+}
+
+.floor .main_inner li .p_price {
+	height: 20px;
+	line-height: 26px;
+	color: #e3101e;
+	font-size: 14px;
+	font-family: "Arial "\9;
+	font-family: Arial,"Microsoft Yahei"
+}
+
+.floor .mc_c {
+	height: 470px;
+	width: 389px;
+	float: left;
+	overflow: hidden
+}
+
+.floor .mc_c,.floor .mc_c .slider {
+	position: relative
+}
+
+.floor .mc_c .slider li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 470px;
+	width: 389px;
+	background: #fff;
+	display: none
+}
+
+.floor .nav,.floor .nav li {
+	cursor: pointer;
+	_font-size: 1px
+}
+
+.floor .nav {
+	position: absolute;
+	bottom: 121px;
+	left: 50%;
+	text-align: center;
+	margin-left: -40px;
+	width: 81px;
+	height: 16px
+}
+
+.floor .nav li {
+	width: 18px;
+	height: 10px;
+	display: inline-block;
+	*display: inline;
+	zoom:1;margin-left: 1px;
+	*float: left
+}
+
+.floor .nav li a {
+	display: block;
+	width: 18px;
+	height: 4px;
+	background: #fff;
+	opacity: .6;
+	filter: Alpha(opacity=60);
+	margin-top: 3px;
+	_font-size: 1px
+}
+
+.floor .nav li.cur a,.floor .nav li:hover a {
+	background: #e3101e;
+	opacity: 1;
+	filter: Alpha(opacity=100)
+}
+
+.floor .page_slider,.floor .slider_page {
+	display: none
+}
+
+.floor .page_slider {
+	z-index: 50
+}
+
+.floor .page_slider p,.floor .slider_page p {
+	display: block;
+	width: 30px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	cursor: pointer
+}
+
+.floor .page_slider .page_down,.floor .page_slider a.slider_next,.floor .slider_page .slider_down,.floor .slider_page a.slider_next {
+	right: 0
+}
+
+.floor .page_slider a,.floor .slider_page a {
+	display: block;
+	width: 30px;
+	height: 60px;
+	background: #000;
+	opacity: .25;
+	filter: Alpha(opacity=25);
+	position: absolute;
+	top: 0
+}
+
+.floor .page_slider span,.floor .slider_page span {
+	display: block;
+	width: 30px;
+	height: 60px;
+	z-index: 101;
+	position: absolute;
+	top: 0
+}
+
+.floor .slider_page span.prev {
+	background: url(http://app.gomein.net.cn/gmpro/2.0.0/channel/newindex/1.4.8/css/i/ui.png) no-repeat -84px -136px;
+	_background: url(http://app.gomein.net.cn/gmpro/2.0.0/channel/newindex/1.4.8/css/i/uiIE6.png) no-repeat -84px -136px
+}
+
+.floor .page_slider span.next,.floor .slider_page span.next {
+	background: url(http://app.gomein.net.cn/gmpro/2.0.0/channel/newindex/1.4.8/css/i/ui.png) no-repeat -84px -74px;
+	_background: url(http://app.gomein.net.cn/gmpro/2.0.0/channel/newindex/1.4.8/css/i/uiIE6.png) no-repeat -84px -74px;
+	right: 0
+}
+
+.floor .page_slider p:hover a,.floor .slider_page p:hover a {
+	opacity: .4;
+	filter: Alpha(opacity=40);
+	cursor: pointer
+}
+
+.floor .brand_slider {
+	width: 372px;
+	height: 102px;
+	left: 10px;
+	bottom: 10px;
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer
+}
+
+.floor .brand_slider li {
+	width: 122px;
+	height: 50px;
+	float: left;
+	margin: 0 0 1px 1px;
+	opacity: .9;
+	filter: Alpha(opacity=90);
+	background: #fff;
+	cursor: pointer
+}
+
+.floor .brand_slider li:hover {
+	opacity: 1;
+	filter: Alpha(opacity=100)
+}
+
+.floor .brand_slider img {
+	display: block;
+	width: 100px;
+	height: 30px;
+	margin: 10px 0 0 11px
+}
+
+.floor .brand_slider ul {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none
+}
+
+.floor .mc_r {
+	width: 601px;
+	height: 470px;
+	float: left;
+	overflow: hidden
+}
+
+.floor .mc_r .mc_r_inner {
+	width: 600px;
+	height: 470px;
+	border-left: 1px solid #eee
+}
+
+.floor .mc_r ul li {
+	width: 200px;
+	height: 235px;
+	float: left
+}
+
+.floor .mc_r ul li a {
+	display: block;
+	width: 199px;
+	height: 234px;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee
+}
+
+.floor .fl_b li {
+	float: left
+}
+
+.floor .fl_b {
+	height: 100px;
+	margin-top: 18px
+}
+
+.floor .fl_b a,.floor .fl_b a img {
+	display: inline-block;
+	width: 1200px;
+	height: 100px
+}
+
+.floor .fl_b a.num2,.floor .fl_b a.num2 img {
+	width: 600px
+}
+
+.floor .fl_b a.num3,.floor .fl_b a.num3 img {
+	width: 400px
+}
+
+.floor .life {
+	width: 1200px;
+	overflow: hidden
+}
+
+.floor .life ul {
+	width: 1208px;
+	overflow: hidden
+}
+
+.floor .life li {
+	width: 294px;
+	height: 220px;
+	float: left;
+	margin-right: 8px;
+	overflow: hidden;
+	position: relative
+}
+
+.floor .life li a {
+	display: block;
+	width: 294px;
+	height: 220px
+}
+
+.floor .life li p {
+	width: 279px;
+	height: 32px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.5);
+	font-size: 14px;
+	line-height: 32px;
+	color: #fff;
+	padding-left: 15px;
+	cursor: pointer;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#30000000", endColorstr="#30000000")
+}
+
+.floor,.lazy-fn,.loading-sync {
+	background: url(http://app.gomein.net.cn/gmlib/ui/loading/3.0.0/loading.gif) 50% 50% no-repeat
+}
+
+.floor-done,.lazy-fn-done {
+	background: 0 0
+}

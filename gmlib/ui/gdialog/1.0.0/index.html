@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>widget</title>
+</head>
+<body>
+	<select name="" id=""></select>
+	<select name="" id=""></select>
+	<button id="open">
+		打开对话框
+	</button>
+<pre> 
+</pre>
+	a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br><select name="" id=""></select>
+	<script src="/??/gmlib/jq/1.7.1/jquery.min.js,gmlib/ui/gmodal/1.0.0/gModal.min.js,gmlib/ui/gdialog/1.0.0/gDialog.min.js"></script>
+	<script>
+	var html = '<div>我是Dialog，点我关闭</div>';
+	var dialog = $.gDialog({
+		html: html
+		,modal:{
+
+		}
+	}).on('click', function(){ 
+		this.hide(); 
+	});
+	$('#open').on('click', function(){
+		dialog.show();
+	}); 
+	</script>
+</body>
+</html>

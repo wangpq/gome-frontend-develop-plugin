@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>替换图片SRC loadsrc</title>
+	<link rel="stylesheet" href="../gmlib/reset/1.1.0/reset.css" />
+	<style type="text/css">
+    .aa{
+       height:600px;
+       background-color: #aaa;
+    }
+    .bb{
+       height:500px;
+       background-color: #00f;
+    }
+    .cc{
+       height:200px;
+       background-color: green;
+    }
+	#demo img {
+	   border:1px solid #ddd;
+	   margin-bottom:10px;
+       background: url(http://app.gomein.net.cn/gmlib/ui/loading/3.0.0/loading-sm.png) 50% 50% no-repeat;
+}
+	</style>
+</head>
+<body>
+    <div class="aa">AA</div>
+    <div class="bb">BB</div>
+    <div class="cc">CC</div>
+<div id="demo">
+<ul>
+    <li>
+		<img src="http://img.gomein.net.cn/images/grey.gif" gm-src="http://img2.gomein.net.cn/image/bbcimg/production_image/nimg/201609/13/15/37/1935419bef2bfd140af7_210.jpg"
+		width="120" height="120">
+    </li>
+    <li>
+		<img src="http://img.gomein.net.cn/images/grey.gif" gm-src="http://gfs4.gomein.net.cn/T1iZbTBCDv1RCvBVdK_210.jpg" data-lazy-img="done"
+		width="120" height="120">
+    </li>
+    <li>
+		<img src="http://img.gomein.net.cn/images/grey.gif" gm-src="http://gfs3.gomein.net.cn/T1t5ETByAv1RCvBVdK_210.jpg"
+		width="120" height="120">
+    </li>
+    <li>
+		<img src="http://img.gomein.net.cn/images/grey.gif" gm-src="http://img2.gomein.net.cn/image/bbcimg/production_image/nimg/201611/28/23/46/3135f1b35dfbf803d6c7_210.jpg"
+		width="120" height="120">
+    </li>
+</ul>
+</div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/gload/1.0.0/gload.js"></script>
+<script src="../gmlib/ui/loadsrc/1.0.0/loadsrc.js"></script>
+
+<script>
+$('#demo').gLoad(function () {
+    alert("我是cc，测试gload");
+    $('#demo').loadsrc('gm-src');
+});
+</script>
+</body>
+</html>  

@@ -1,0 +1,351 @@
+﻿.ordershow-detail {
+    margin: 10px 0;
+}
+.os-imgs li {
+    float: left;
+    margin:0 7px 0 0 !important;
+    padding:0 !important;
+    border: 1px solid #eee;
+}
+
+.os-imgs li:hover {
+    border-color: #c00;
+}
+.os-imgs img {
+    width: 76px;
+    height: 76px;
+    border: 1px solid #fff;
+    cursor: url(//css.gomein.net.cn/gmlib/ui/gphotoviewer/1.0.0/i/gm-big.cur), auto\9;
+    cursor: url(/gmlib/ui/gphotoviewer/1.0.0/i/gm-big.cur), auto;
+}
+.os-imgs li.active,
+.os-imgs li.active img {
+    border-color: #e4393c;
+}
+
+.os-more {
+    float: left;
+    margin-top: 112px;
+    color: #A5A5A5;
+    padding-left: 20px;
+}
+.os-more a {
+    padding: 0 5px;
+    color: #06c;
+    font-family: "simsun";
+}
+.p-photos {
+    padding: 12px 0;
+    width:534px;
+}
+
+.p-photos .p-photos-thumbnails {
+    height: 85px;
+    margin: 0 auto 10px;
+    position: relative
+}
+
+.p-photos .p-photos-thumbnails .thumb-list {
+    width:432px;
+    height: 85px;
+    overflow: hidden;
+    margin:0 auto;
+}
+
+.p-photos .p-photos-thumbnails .thumb-list ul li {
+    float: left;
+    width: 80px;
+    height: 85px;
+    padding: 0;
+    margin: 0 8px 0 0;
+}
+
+.p-photos .p-photos-thumbnails .thumb-list ul li a {
+    display: block;
+    width: 76px;
+    height: 76px;
+    padding: 1px;
+    border: 1px solid #eee;
+    overflow: hidden
+}
+
+.p-photos .p-photos-thumbnails .thumb-list ul li a img {
+    display: block;
+    vertical-align: top;
+    width: 76px;
+    height: 76px;
+    background: url(//app.gomein.net.cn/gmlib/ui/loading/2.0.0/loading-sm.gif) 50% 50% no-repeat;
+}
+
+.p-photos .p-photos-thumbnails .thumb-list ul li.selected,
+.p-photos .p-photos-thumbnails .thumb-list ul li:hover {
+    background: url(/gmlib/ui/gphotoviewer/1.0.0/i/prdCommentsIcons.png) no-repeat -374px 73px;
+}
+
+.p-photos .p-photos-thumbnails .thumb-list ul li.selected a,
+.p-photos .p-photos-thumbnails .thumb-list ul li:hover a {
+    padding: 0;
+    border: 2px solid #e4393c
+}
+
+.p-photos .p-photos-thumbnails .i-prev-btn {
+    display: inline-block;
+    width: 40px;
+    height: 78px;
+    background: #c2c2c2 url(/gmlib/ui/gphotoviewer/1.0.0/i/prdCommentsIcons.png) no-repeat 0px -32px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 1px;
+    left: 0
+}
+
+.p-photos .p-photos-thumbnails .i-prev-btn:hover {
+    background-color:#c8c8c8;
+    background-position: 0 -32px;
+}
+
+.p-photos .p-photos-thumbnails .i-next-btn {
+    display: inline-block;
+    width: 40px;
+    height: 78px;
+    background: #c2c2c2 url(/gmlib/ui/gphotoviewer/1.0.0/i/prdCommentsIcons.png) no-repeat -26px -32px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 1px;
+    right: 0;
+}
+
+.p-photos .p-photos-thumbnails .i-next-btn:hover {
+    background-color:#c8c8c8;
+    background-position: -26px -32px;
+}
+
+.p-photos .p-photos-thumbnails .i-prev-disable,
+.p-photos .p-photos-thumbnails .i-prev-disable:hover {
+    background-color:#e0e0e0;
+    background-position: 0px -32px;
+    cursor:default;
+}
+
+.p-photos .p-photos-thumbnails .i-next-disable,
+.p-photos .p-photos-thumbnails .i-next-disable:hover {
+    background-color:#e0e0e0;
+    background-position: -26px -32px;
+    cursor:default;
+}
+
+.p-photos .p-photos-operate {
+    margin-bottom: 8px
+}
+
+.p-photos .p-photos-operate .opt-item {
+    float: left;
+    height: 16px;
+    padding: 2px 0;
+    margin-right: 20px
+}
+
+.p-photos .p-photos-operate .opt-item:hover {
+    text-decoration: none
+}
+
+.p-photos .p-photos-operate .opt-item i {
+    margin-right: 4px;
+    vertical-align: top;
+    _cursor: pointer
+}
+
+.p-photos .p-photos-operate .opt-item i.i-shut {
+    background-position: -284px 0
+}
+
+.p-photos .p-photos-operate .opt-item i.i-magnifier {
+    background-position: -307px -1px
+}
+
+.p-photos .p-photos-operate .opt-item i.i-rotate0 {
+    background-position: -331px -1px
+}
+
+.p-photos .p-photos-operate .opt-item i.i-rotate1 {
+    background-position: -354px -1px
+}
+
+.p-photos .p-photos-operate .opt-item .text {
+    display: inline-block;
+    line-height: 16px;
+    vertical-align: top;
+    _cursor: pointer
+}
+
+.p-photos .p-photos-operate .i-magnifier,
+.p-photos .p-photos-operate .i-rotate0,
+.p-photos .p-photos-operate .i-rotate1,
+.p-photos .p-photos-operate .i-shut {
+    display: inline-block;
+    background: url(/gmlib/ui/gphotoviewer/1.0.0/i/prdCommentsIcons.png) no-repeat;
+    width: 18px;
+    height: 18px
+}
+
+.p-photos .p-photos-operate .sep {
+    float: left;
+    width: auto;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 8px;
+    color: #e1e1e1
+}
+
+.p-photos .p-photos-viewer {
+    width: 100%;
+    height: 405px;
+    border: 1px solid #999;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff
+}
+.p-photos .p-photos-viewer.ordershow-preview-wrapper {
+    border: none;
+}
+.p-photos .p-photos-viewer .p-photos-wrap {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 0;
+    position: relative
+}
+
+.p-photos .p-photos-viewer .p-photos-wrap i {
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    overflow: hidden;
+    vertical-align: middle
+}
+
+.p-photos .p-photos-viewer .p-photos-wrap img {
+    vertical-align: middle;
+    margin-left: -1px;
+    max-height: 405px;
+    max-width: 100%;
+    _height: 405px;
+    _width: 100%;
+}
+
+.p-photos .p-photos-viewer .p-photos-wrap .cursor-left {
+    width: 100px;
+    left: 0;
+    cursor: url(//css.gomein.net.cn/gmlib/ui/gphotoviewer/1.0.0/i/gm-pic-prev.cur), auto\9;
+    cursor: url(/gmlib/ui/gphotoviewer/1.0.0/i/gm-pic-prev.cur), auto;
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background: fixed url(about:blank)
+}
+
+.p-photos .p-photos-viewer .p-photos-wrap .cursor-small {
+    width: 100%;
+    left: 0;
+    cursor: url(//css.gomein.net.cn/gmlib/ui/gphotoviewer/1.0.0/i/gm-small.cur), auto\9;
+    cursor: url(/gmlib/ui/gphotoviewer/1.0.0/i/gm-small.cur), auto;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background: fixed url(about:blank)
+}
+
+.p-photos .p-photos-viewer .p-photos-wrap .cursor-right {
+    width: 100px;
+    right: 0;
+    cursor: url(//css.gomein.net.cn/gmlib/ui/gphotoviewer/1.0.0/i/gm-pic-next.cur), auto\9;
+    cursor: url(/gmlib/ui/gphotoviewer/1.0.0/i/gm-pic-next.cur), auto;
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background: fixed url(about:blank)
+}
+.gm-image-viewer{
+    width:970px;
+    margin:0 auto;
+}
+.w990 .gm-image-viewer{
+    width:704px;
+}
+.gm-image-viewer .gm-image-wrap{
+    border:none;
+    height:auto;
+}
+.gm-image-viewer .gm-image-wrap .p-photos-wrap{
+    width: 748px;
+    border:1px solid #eee;
+    height: 500px;
+    float:left;
+}
+.gm-image-viewer .p-photos-viewer .p-photos-wrap img {
+    max-height:500px;
+    _height: 500px;
+    min-height:80px;
+    min-width:80px;
+    background: url(//app.gomein.net.cn/gmlib/ui/loading/2.0.0/loading-sm.gif) 50% 50% no-repeat;
+}
+.w990 .gm-image-viewer .gm-image-wrap .p-photos-wrap{
+    width: 494px;
+}
+.gm-image-viewer .gm-image-wrap .info-viewer{
+    float: right;
+    width: 206px;
+    height: 500px;
+    overflow: hidden;
+}
+.gm-image-viewer .p-photos-thumbnails .thumb-list {
+    width:872px;
+}
+.w990 .gm-image-viewer .p-photos-thumbnails .thumb-list{
+    width:608px;
+}
+.gm-image-viewer .gm-image-wrap .info-viewer .p-comment {
+    margin-top: 20px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+}
+.gm-image-viewer .gm-image-wrap .info-viewer .comment-time {
+    line-height: 24px;
+    color: #9a9a9a;
+}
+.gm-image-viewer .gm-image-wrap .info-viewer .features-wrap {
+    padding-top: 10px;
+    overflow:hidden;
+}
+.gm-image-viewer .gm-image-wrap .info-viewer .features-wrap .p-features {
+    float: left;
+    width: 160px;
+}
+.gm-image-viewer .gm-image-wrap .info-viewer .features-wrap .p-features li {
+    color: #666;
+    line-height: 30px;
+    font-family: "\5b8b\4f53";
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.gm-image-viewer .gm-image-wrap .info-viewer .features-wrap .user-item-wrap {
+    float: left;
+    width: 40px;
+}
+.gm-image-viewer .gm-image-wrap .info-viewer .features-wrap .user-item-wrap .user-item {
+    width: 80px;
+    line-height: 30px;
+    height: 30px;
+    overflow: hidden
+}
+

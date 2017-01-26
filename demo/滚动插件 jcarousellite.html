@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>滚动插件 jcarousellite</title>
+    <style>
+        .jcarousel{ overflow:hidden;}
+        .jcarousel .scroll{float:left;}
+        .jcarousel .scroll img {width:150px;height:118px;margin:10px;border-radius:5px;}
+        .jcarousel .btn-prev, a.btn-next{display:block;width:26px;height:30px;line-height:1;background-color:#333333;color:ghostwhite;text-decoration:none;font-family:Arial, sans-serif;font-size:25px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:8px;float:left;}
+        .jcarousel .btn-prev {margin:50px -5px 0 0;text-indent:7px;}
+        .jcarousel .btn-next {margin:50px 0 0 -5px;text-indent:10px;}
+    </style>
+</head>
+<body>
+<div class="jcarousel">
+    <a href="javascript:void(0);" class="btn-prev">&lsaquo;</a>
+    <div class="scroll">
+        <ul>
+            <li><img src="http://www.gmarwaha.com/jquery/jcarousellite/image/1.jpg"></li>
+            <li><img src="http://www.gmarwaha.com/jquery/jcarousellite/image/2.jpg"></li>
+            <li><img src="http://www.gmarwaha.com/jquery/jcarousellite/image/3.jpg"></li>
+            <li><img src="http://www.gmarwaha.com/jquery/jcarousellite/image/4.jpg"></li>
+            <li><img src="http://www.gmarwaha.com/jquery/jcarousellite/image/5.jpg"></li>
+            <li><img src="http://www.gmarwaha.com/jquery/jcarousellite/image/6.jpg"></li>
+            <li><img src="http://www.gmarwaha.com/jquery/jcarousellite/image/7.jpg"></li>
+            <li><img src="http://www.gmarwaha.com/jquery/jcarousellite/image/8.jpg"></li>
+        </ul>
+    </div>
+    <a href="javascript:void(0);" class="btn-next">&rsaquo;</a>
+</div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/jcarousellite/1.0.1/jcarousellite.js"></script>
+<script>
+$(".scroll").jCarouselLite({
+    btnNext:".btn-next",
+    btnPrev:".btn-prev",
+    auto: 3000,
+    speed: 450
+});
+</script>
+</body>
+</html>  

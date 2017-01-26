@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>倒计时 gTimer</title>
+    <style>
+	.countdown {color:#333;font:20px/1 Arial,"\5b8b\4f53"}
+	.countdown i {font-style:normal;font:14px/20px Arial;display:inline-block;width:20px;height:20px;background:#333;color:#fff;text-align:center;margin:0 2px}
+	.countdown b {font:400 12px/20px Arial;color:#c00}
+	.countdown-vertical b {display:block;line-height:30px}
+    </style>
+</head>
+<body>
+<div class="countdown" id="demo">
+    <span class="time">
+		<i>00</i>天 <i>00</i>:<i>00</i>:<i>00</i>
+	</span>
+    <b>限量5件</b>
+</div>
+<hr>
+<div class="countdown countdown-vertical">
+    <i>15</i>:<i>20</i>:<i>15</i>
+    <b>限量5件</b>
+</div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/unit/gtime/1.0.0/gtime.js"></script>
+<script>
+	/**
+	 * 时间间隔对象
+	 * @ gTimer
+	 * @param{ 
+         cT:当前时间(毫秒),
+         eT:截止时间（毫秒）,
+         gap:间隔(毫秒),
+         aEven:到点触发的事件function,
+         iEven:初始化函数，初始化时被调用,
+         lEven:倒计时结束触发方法
+     }* 
+	 */
+    $.gTimer({
+        ct: 1484898031635,
+        et: 1484999031635,
+        iEven: function () {
+            if (this.ct >= this.et <= 0) {
+                return;
+            }
+        },
+        aEven: function () {
+            if (this.ct >= this.et) { 
+                return; 
+            }
+            var dd = Number(this.dt.format('$dd')),
+                h = Number(this.dt.format('$hh')),
+                m = Number(this.dt.format('$mm')),
+                s = Number(this.dt.format('$s'));
+            $('#demo .time').html(
+			    '<i>'+dd+'</i>天 <i>'+h+'</i>:<i>'+m+'</i>:<i>'+s+'</i>'
+			);
+        },
+        lEven: function () {
+            $('#demo .time').html("已经结束");
+        }
+    });
+</script>
+</body>
+</html>  

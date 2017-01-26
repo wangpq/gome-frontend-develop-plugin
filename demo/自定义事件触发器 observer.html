@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>自定义事件触发器 observer</title>
+
+</head>
+<body>
+
+<div class="desc"></div>
+<div class="cuxiao"></div>
+<div class="haoping"></div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/unit/observer/observer.js"></script>
+<script>
+var obj={
+	special: "N",
+	des: "hi亲们这是长~",
+	cuxiao : "促销语",
+	haoping : "好评度",
+	promDesc: "",
+	jiaDianHuiShou: 0,
+	star: 4
+}
+var prdObserver = new Gome.prd.Observer();
+
+(function(data,hander){
+	hander.on('Description', function (data) { 
+		$(".desc").text(data.des);
+	});
+	
+	hander.on('CU_XIAO_YU', function (data) { 
+		$(".cuxiao").text(data.cuxiao);
+	});
+	
+	hander.on('HAO_PING_DU', function (data){
+		$(".haoping").text(data.haoping);
+	});
+
+	//销毁事件
+	hander.die('HAO_PING_DU');
+    
+	//触发事件
+	for(var eType in hander._eventsList) {
+		hander.fireEvent(eType, data);
+	}
+})(obj,prdObserver)
+
+
+</script>
+</body>
+</html>  

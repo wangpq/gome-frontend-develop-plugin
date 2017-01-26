@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>焦点图(轮播图) gslider1.0.5</title>
+    <link rel="stylesheet" href="../gmlib/reset/1.1.0/reset.css">
+	<link rel="stylesheet" href="./css/plugin/gslider.css" />
+    <style>
+    #similarDom{margin:20px auto;}
+    </style>
+</head>
+<body>
+<div id="similarDom"></div>
+
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/arttemplate/2.0.4/template.js"></script>
+<!--
+<script src="../gmlib/ui/arttemplate/2.0.4/template-simple.js"></script>
+-->
+<script src="./js/template-helper.js"></script>
+<script src="../gmlib/ui/loadsrc/1.0.0/loadsrc.js"></script>
+<script src="./data/leiSiJson.js"></script>
+<script src="../gmlib/ui/gslider/1.0.5/gslider.js"></script>
+<script>
+;(function($,w){  
+
+var data=leiSiJson;
+if (data && data.lst && data.lst.length > 0) {
+    var products = ""
+        , tlscroll = $('body').hasClass('w990') ? 5 : 6;
+    template.helper('bigData', function (pid) {
+        products += pid;
+    });
+
+    var tpl='\
+        <h3>其他类似商品</h3>\
+        <div class="bd">\
+            <div class="bd-btnout">\
+                <a data-btn="tlRight" href="javascript:;"><b></b></a>\
+                <a data-btn="tlLeft" href="javascript:;"><s></s></a>\
+            </div>\
+            <div class="bd-cont">\
+                <ul class="pushul clearfix">\
+                    <% for(var i=0,j=lst.length; i<j; i++){ \
+                        var prd = lst[i];\
+                        var href = "/"+prd.pid+"-"+prd.sid+".html";\
+                        var point = i<j-1?",":"";\
+                        bigData(prd.pid+point);\
+                    %>\
+                    <li>\
+                        <a track="5:<%= prd.pid %>" href="<%= prd.purl  %>"  target="_blank" title="<%= prd.pn %>" maima_param="<%=prd.maima_param%>">\
+                            <img gome-src="http:<%= prd.iurl %>"  height="130" width="130">\
+                        </a>\
+                        <a track="5:<%= prd.pid %>" href="<%= prd.purl  %>"  target="_blank" title="<%= prd.pn %>" maima_param="<%=prd.maima_param%>">\
+                            <h2><%= prd.pn %></h2>\
+                        </a>\
+                        <p class="yuan colprice fb">¥<span><%= prd.price %></span></p>\
+                    </li>\
+                    <% } %>\
+                </ul>\
+            </div>\
+        </div>';
+
+    $("#similarDom")
+    .attr('maima_param', data.maima_param)
+    .addClass("gslider")
+    .html(template.compile(tpl)(data))
+
+    for(var i=0;i<tlscroll;i++){
+        $('.pushul li').eq(i).loadsrc('gome-src');
+    }
+
+    if (data.size > tlscroll) {
+        $('.bd-cont').gSlider({
+            isAuto: false,
+            isImgLoad: false,
+            dataOriginal: "gome-src",
+            showNum: tlscroll,
+            stepLen: tlscroll,
+            time: 3000,
+            btnGo: {left: '[data-btn="tlLeft"]', right: '[data-btn="tlRight"]'},
+            callback:function(){
+                $('.pushul').loadsrc('gome-src');
+            }
+        });
+    } else {
+        $("#similarDom").loadsrc('gome-src');
+        $("#similarDom .bd-btnout").children().addClass("disable");
+    };
+
+} 
+})(jQuery,window)
+</script>
+</body>
+</html>  

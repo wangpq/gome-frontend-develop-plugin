@@ -1,0 +1,136 @@
+@charset "utf-8";
+.gslider {
+	border: 1px solid #eee;
+	width: 1198px;
+	height: 253px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.gslider h3,
+.gslider-list h3 {
+	height: 36px;
+	padding-left: 10px;
+	position: relative;
+	color: #666;
+	font: 600 12px/36px 'microsoft yahei';
+	background: #f6f6f6
+}
+
+.gslider .pushul {
+	padding-top: 10px
+}
+
+.gslider .pushul li {
+	float: left;
+	width: 186px;
+	text-align: center;
+	_display: inline; 
+}
+
+.gslider .pushul li h2{
+	color: #666;
+	font-weight:normal;
+	text-align: left;
+	word-break: break-all;
+	height: 36px;
+	overflow: hidden;
+	margin: 5px auto
+}
+
+.gslider .pushul li a:hover,
+.gslider .pushul li h2:hover{
+	text-decoration: underline;
+	color: #e3101e
+}
+
+.gslider .pushul li p{
+	font-weight: 400;
+	font-size: 18px;
+	text-align: left;
+	font-family: arial;
+	margin-top: 7px
+}
+
+.gslider .pushul li p.yuan{
+	color: #e3101e;
+	font-family: arial;
+}
+
+.gslider .pushul li h2 {
+	width: 155px
+}
+
+.gslider .pushul li p {
+	width: 155px;
+	margin: 0 auto
+}
+
+.w990 .gslider {
+	width: 988px
+}
+.gslider .bd {
+	width: 100%;
+	overflow: hidden;
+	position: relative
+}
+
+.w990 .bd-cont {
+	width: 950px;
+	margin-left: 44px
+}
+
+.gslider .bd-cont {
+	width: 1110px;
+	height: 210px;
+	overflow: hidden;
+	margin-left: 45px;
+	position: relative
+}
+
+.gslider .bd-btnout {
+	position: relative;
+	height: 1px;
+	width: 100%;
+	z-index: 3
+}
+
+.gslider .bd-btnout b,
+.gslider .bd-btnout s {
+	width: 13px;
+	height: 18px;
+	overflow: hidden;
+	position: absolute;
+	top: 90px;
+	display: block;
+	background: url(http://css.gomein.net.cn/gmpro/2.0.0/item/1.1.10/css/i/sprite-product.png) no-repeat;
+	_background: url(http://css.gomein.net.cn/gmpro/2.0.0/item/1.1.10/css/i/sprite-product.gif) no-repeat
+}
+
+.gslider .bd-btnout b {
+	background-position: -31px -118px;
+	left: 20px
+}
+
+.gslider .bd-btnout s {
+	background-position: -45px -118px;
+	right: 20px
+}
+
+.gslider .bd-btnout a:hover b {
+	background-position: -31px -138px
+}
+
+.gslider .bd-btnout a:hover s {
+	background-position: -45px -138px
+}
+
+.gslider .bd-btnout a.disable:hover b {
+	background-position: -1px -46px;
+	cursor: default
+}
+
+.gslider .bd-btnout a.disable:hover s {
+	background-position: -15px -46px;
+	cursor: default
+}

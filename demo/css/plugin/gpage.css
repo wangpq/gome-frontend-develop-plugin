@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+.page {
+	height: 32px;
+	margin-right: 20px;
+	padding: 15px 0;
+	color: #999
+}
+
+.page a {
+	float: left;
+	color: #666;
+	line-height: 30px;
+	margin-left: -1px;
+	padding: 0 12px;
+	border: 1px solid #ddd
+}
+
+.page a.cur {
+	background-color: #f8f8f8;
+	color: #888;
+	font-weight: 700
+}
+
+.page .num {
+	margin: 0;
+	margin-left: -1px
+}
+
+.page .num:hover {
+	color: #e3101e;
+	text-decoration: underline
+}
+
+.page span {
+	float: left;
+	line-height: 32px;
+	*display: inline;
+	padding: 0 5px;
+	color: #999
+}
+
+.page .ndot {
+	color: #333
+}
+
+.page select {
+	float: left
+}
+
+.page .gpinput {
+	width: 32px;
+	height: 28px;
+	float: left;
+	line-height: 28px;
+	text-align: center;
+	position: relative
+}
+
+.gpnext,.gpprev {
+	position: relative;
+	width: 44px;
+	height: 30px;
+	border: 1px solid #ddd;
+	overflow: hidden;
+	text-indent: 0
+}
+
+.page .gpprev {
+	text-align: right
+}
+
+.page .gpnext {
+	text-align: left
+}
+
+.page .gpprev {
+	margin: 0
+}
+
+.page .gpnext b,
+.page .gpprev b {
+	position: absolute;
+	width: 6px;
+	height: 10px;
+	line-height: 0;
+	top: 50%;
+	margin-top: -5px;
+	background-position: -23px -19px;
+	overflow: hidden
+}
+
+.page .gpprev b {
+	left: 7px
+}
+
+.page .gpnext b {
+	left: auto;
+	right: 7px;
+	background-position: -29px -19px
+}
+
+.page .gpnext.gno,
+.page .gpprev.gno {
+	color: #999;
+	display: none
+}
+
+.page .gpsub {
+	float: left;
+	width: 50px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	background: #F8F8F8;
+	cursor: pointer;
+	color: #333;
+	outline: 0 none;
+	border: 1px solid #ddd;
+	overflow: hidden
+}

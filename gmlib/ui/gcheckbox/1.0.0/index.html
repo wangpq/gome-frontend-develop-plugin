@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>widget</title>
+</head>
+<body> 
+	<style>
+	div{
+		width: 15px;
+		height: 15px; 
+		margin: 10px;
+		border: 1px solid red;
+	}
+	div.checked{
+		background: red;
+	}
+	div.disabled{
+		border: 1px solid #ccc;
+	}
+
+	div.disabled.checked{
+		background: #ccc;
+	}
+
+	div input{
+		display: none;
+	}
+	div.disabled{
+
+	}
+	</style>
+	normal:
+	<div gui-widget="checkbox" gui-class-checked="checked" gui-class-disabled="disabled">
+		<input type="checkbox" name="abc">
+	</div> 
+
+	normal -> checked:
+	<div gui-widget="checkbox" gui-class-checked="checked" gui-class-disabled="disabled">
+		<input type="checkbox" name="abc" checked>
+	</div>
+	
+	disabled:
+	<div gui-widget="checkbox" gui-class-checked="checked" gui-class-disabled="disabled">
+		<input type="checkbox" name="abc" disabled>
+	</div>
+
+	disabled -> checked:
+	<div gui-widget="checkbox" gui-class-checked="checked" gui-class-disabled="disabled">
+		<input type="checkbox" name="abc" disabled checked>
+	</div>
+	
+	
+	
+	<script src="/??gmlib/jq/1.7.1/jquery.min.js,gmlib/ui/gcheckbox/1.0.0/gCheckbox.min.js"></script> 
+	<script>
+	$.gCheckbox.render(); // 按照checkbox状态渲染外面的容器
+	$.gCheckbox.bind();   // 绑定checkbox渲染同步状态事件
+	</script>
+</body>
+</html>

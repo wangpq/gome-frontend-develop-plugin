@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>延时触发TAB floorTab</title>
+	<link rel="stylesheet" href="../gmlib/reset/1.1.0/reset.css" />
+    <link rel="stylesheet" href="./css/plugin/floortab.css">
+</head>
+<body>
+
+<div class="floor">
+	<div class="mt" style="border-bottom:1px solid #bb81df">
+		<div class="mtTop">
+			<span class="h2_text">8F</span><h2>汽车用品</h2>
+		</div>
+		<ul class="tab" floor-info="9" hcolor="#bb81df">
+			<li class="cur"><a  href="javascript:void(0)" modelid="1000061676">精品特卖</a></li>
+			<li key="/floor/floor1and11_8/tab_1" modelid="1000061693" class=""><a href="javascript:void(0);">车载电器</a></li>
+			<li key="/floor/floor1and11_8/tab_2" modelid="1000061705" class=""><a href="javascript:void(0);">冬季坐垫</a></li>
+			<li key="/floor/floor1and11_8/tab_3" modelid="1000061705" class=""><a href="javascript:void(0);">防冻液</a></li>
+		</ul>
+	</div>
+   
+	<div class="mc">
+		<div class="mc_1">
+		</div>
+		<div class="main_warp">
+			<div class="main" style="display:block;">精品特卖 精品特卖</div>
+			<div class="main">车载电器 车载电器</div>
+			<div class="main">冬季坐垫 冬季坐垫</div>
+			<div class="main">防冻液 防冻液</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="floor">
+	<div class="mt" style="border-bottom:1px solid #bb81df">
+		<div class="mtTop">
+			<span class="h2_text">9F</span><h2>海外购</h2>
+		</div>
+		<ul class="tab" floor-info="9" hcolor="#bb81df">
+			<li class="cur"><a  href="javascript:void(0)" modelid="1000061676">精选热卖</a></li>
+			<li key="/floor/floor1and11_9/tab_1" modelid="1000061693" class=""><a href="javascript:void(0);">母婴用品</a></li>
+			<li key="/floor/floor1and11_9/tab_2" modelid="1000061705" class=""><a href="javascript:void(0);">家居日用</a></li>
+		</ul>
+	</div>
+   
+	<div class="mc">
+		<div class="mc_1"></div>
+		<div class="main_warp">
+			<div class="main" style="display:block;">精选热卖 精选热卖</div>
+			<div class="main">母婴用品 母婴用品</div>
+			<div class="main">家居日用 家居日用</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="./js/lazyLoad.js"></script>
+<script src="./js/floorTab.js"></script>
+<!--
+<script src="../gmlib/ui/delayhover/1.0.0/delayhover.js"></script>
+-->
+<script>
+var ct=$('.floor');
+ct.each(function(){
+    var ct=$(this);
+	$(this).floorTab({
+		content: ct,
+		endFun: function(floor_index, tab_index, $_tab_content, floor_key, tab_id){
+			//参数含义 楼层index， tab页签index， 需要放楼层内签的div， tab页签对应的keywords， tab页签对应的modelId，
+			//window.loadTabData(floor_index, tab_index, $_tab_content, floor_key, tab_id);
+		}
+	});
+});
+</script>
+</body>
+</html>  

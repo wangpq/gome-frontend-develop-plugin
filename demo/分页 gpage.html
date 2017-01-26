@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>分页 gpage</title>
+	<link rel="stylesheet" href="../gmlib/reset/1.1.0/reset.css" />
+	<link rel="stylesheet" href="./css/plugin/gpage.css" />
+</head>
+<body>
+
+<div id="j-page" class="page"></div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/gpage/1.0.1/gpage.js"></script>
+<script>
+	$('.page').gPage({
+		ap: 12,
+		cp: 2,
+		tg: "javascript:;",
+		e: function () {
+		
+			alert(this.cp);
+		}
+	});
+</script>
+</body>
+</html>  

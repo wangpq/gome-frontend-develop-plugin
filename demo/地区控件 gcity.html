@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>地区控件 gcity</title>
+    <link rel="stylesheet" href="../gmlib/unit/gcity/1.0.0/gcity.css">
+</head>
+<body>
+<!--这段代码页面都有吧-->
+<script type="text/javascript">
+    var dynSite='http://g.gome.com.cn',staSite='http://www.gome.com.cn',contextPath='/ec/homeus',imgServer='http://img.gomein.net.cn/images',secureURL='https://g.gome.com.cn:443',pictureserver='http://img.gomein.net.cn/image',cookieDomain='.gome.com.cn',stageJsServer='http://js.gomein.net.cn',stageImageServer='http://img.gomein.net.cn',stageCssServer='http://css.gomein.net.cn',cssserver='http://css.gomein.net.cn/css',jsserver='http://js.gomein.net.cn/js',versionData='20150040001500090023';
+</script>
+
+<!--以下为地区控件代码-->
+<div class="prdRight city">
+	<span id="address" class="regon">
+	<a id="stockaddress" href="javascript:;"></a>
+	</span>
+    <div class="gCity clearfix"></div>
+</div>
+<!--我是为撑开页面的-->
+<p style="height:240px;"></p>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/cookie/1.0.0/cookie.js"></script>
+<script src="../gmlib/unit/gcity/1.0.0/gcity.js"></script>
+<script>
+    $('#address').gCity({
+        gc_ads:'chtm',
+        gc_evt:function(){
+            //your code
+            //重写城市cookie
+            //$.cookie('atgregion',this.xid+"|"+this.chtm+"|"+this.cid+"|"+this.sid+"|"+this.zid,{expires:30,path:'/',domain:cookieDomain});
+            //重写八叉乐cookie
+            //$.cookie('atgMboxCity',this.snam,{expires:30,path:'/',domain:cookieDomain});
+        }
+    });
+</script>
+</body>
+</html>  

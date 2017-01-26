@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>选项卡切换 gtabs</title>
+    <style>
+/*此样式是为实现demo所写，实际项目中请按照项目需求自己编写，不需复制此样式*/
+*{margin:0; padding:0;}
+li{list-style:none;}
+
+.demolist{overflow:hidden;height:30px;width:400px;border-bottom:2px solid #000;}
+.demolist li{float:left; height:30px; font-size:14px; line-height:30px; text-align: center;padding:0 8px; cursor:pointer;margin-right:10px;}
+.demolist li.cur{background:#333;color:#fff;}
+.gTbox{clear:both;}
+.gTbox div{clear:both;width:380px;height:200px;border:1px solid #ccc;border-top:none;padding:10px;}
+    </style>
+</head>
+<body>
+<div id="demoBoxID">
+	<ul class="demolist" id="gTbtn">
+		<li class="cur">手机</li>
+		<li>电脑</li>
+		<li>电视</li>
+		<li>洗衣机</li>
+		<li>冰箱</li>
+	</ul>
+	<div id="gTbox" class="gTbox">
+		<div>手机手机手机手机</div>
+		<div>电脑电脑电脑电脑</div>
+		<div>电视电视电视电视</div>
+		<div>洗衣机洗衣机洗衣机</div>
+		<div>冰箱冰箱冰箱<img src="" gome-src="http://img13.gomein.net.cn/image/prodimg/topics/yuyu/201607/12/20160712180650.jpg" width="400"></div>
+	</div>
+</div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/gtabs/1.0.0/gtabs.js"></script>
+<script>
+$('#demoBoxID').gTabs({ btnID: "#gTbtn", boxID: "#gTbox", bind: 'click', hide: 1, gomesrc: 1 });
+</script>
+
+</body>
+</html>  
