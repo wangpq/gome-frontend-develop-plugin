@@ -17,7 +17,7 @@
 		<div class="mtTop">
 			<span class="h2_text">8F</span><h2>汽车用品</h2>
 		</div>
-		<ul class="tab" floor-info="9" hcolor="#bb81df">
+		<ul class="tab" floor-info="8" hcolor="#bb81df">
 			<li class="cur"><a  href="javascript:void(0)" modelid="1000061676">精品特卖</a></li>
 			<li key="/floor/floor1and11_8/tab_1" modelid="1000061693" class=""><a href="javascript:void(0);">车载电器</a></li>
 			<li key="/floor/floor1and11_8/tab_2" modelid="1000061705" class=""><a href="javascript:void(0);">冬季坐垫</a></li>
@@ -29,10 +29,10 @@
 		<div class="mc_1">
 		</div>
 		<div class="main_warp">
-			<div class="main" style="display:block;">精品特卖 精品特卖</div>
-			<div class="main">车载电器 车载电器</div>
-			<div class="main">冬季坐垫 冬季坐垫</div>
-			<div class="main">防冻液 防冻液</div>
+			<div class="main" style="display:block;" tab-data-load="0">精品特卖 精品特卖</div>
+			<div class="main" tab-data-load="0">车载电器 车载电器</div>
+			<div class="main" tab-data-load="0">冬季坐垫 冬季坐垫</div>
+			<div class="main" tab-data-load="0">防冻液 防冻液</div>
 		</div>
 	</div>
 </div>
@@ -53,9 +53,9 @@
 	<div class="mc">
 		<div class="mc_1"></div>
 		<div class="main_warp">
-			<div class="main" style="display:block;">精选热卖 精选热卖</div>
-			<div class="main">母婴用品 母婴用品</div>
-			<div class="main">家居日用 家居日用</div>
+			<div class="main" style="display:block;" tab-data-load="0">精选热卖 精选热卖</div>
+			<div class="main" tab-data-load="0">母婴用品 母婴用品</div>
+			<div class="main" tab-data-load="0">家居日用 家居日用</div>
 		</div>
 	</div>
 </div>
@@ -70,13 +70,14 @@
 <!--
 <script src="../gmlib/ui/delayhover/1.0.0/delayhover.js"></script>
 -->
-<script>
+<script>  
 var ct=$('.floor');
-ct.each(function(){
+ct.each(function(){ 
     var ct=$(this);
 	$(this).floorTab({
 		content: ct,
-		endFun: function(floor_index, tab_index, $_tab_content, floor_key, tab_id){
+		endFun: function(floor_index, tab_index, $_tab_content, floor_key, tab_id){ debugger
+		    console.log(floor_index+'---'+tab_index);
 			//参数含义 楼层index， tab页签index， 需要放楼层内签的div， tab页签对应的keywords， tab页签对应的modelId，
 			//window.loadTabData(floor_index, tab_index, $_tab_content, floor_key, tab_id);
 		}

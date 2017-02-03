@@ -84,7 +84,8 @@ if (data && data.lst && data.lst.length > 0) {
             stepLen: tlscroll,
             time: 3000,
             btnGo: {left: '[data-btn="tlLeft"]', right: '[data-btn="tlRight"]'},
-            callback:function(){
+            callback:function(g){
+            
                 $('.pushul').loadsrc('gome-src');
             }
         });

@@ -8,255 +8,14 @@
     <meta name="description" content="description">
     <title>国美详情页UI组件</title>
 	<link rel="stylesheet" href="../gmlib/reset/1.1.0/reset.css" />
-    <style type="text/css">
-
-	.wbox {
-		width: 1200px;
-		margin: 0 auto
-	}
-	.dt-side {
-		width: 210px;
-		float: left;
-		display: _inline
-	}
-	.dt-main {
-		width: 980px;
-		float: right;
-		display: _inline
-	}
-
-
-
-	.panel-box {
-		width: 208px;
-		border: 1px solid #eee;
-		margin-bottom: 10px
-	}
-	.panel-box.rcview {
-		width: 208px;
-		float: left;
-		display: _inline;
-	}
-	.panel-box .panel-hd,
-	.panel-box .panel-titblank {
-		height: 36px;
-		padding-left: 10px;
-		color: #666;
-		font: 600 12px/36px 'microsoft yahei';
-		background: #f6f6f6
-	}
-	.panel-hd:after {
-		content: ".";
-		display: block;
-		height: 0;
-		clear: both;
-		visibility: hidden
-	}
-	.panel-box .panel-sbbox {
-		padding: 8px 15px 0
-	}
-	.panel-box .panel-bd .nav{
-		padding: 15px 10px 5px 10px
-	}
-	.panel-box .panel-sbbox .nav a {
-		display: inline-block;
-		margin-bottom: 10px;
-		height: 15px;
-		line-height: 15px;
-		overflow: hidden
-	}
-	.panel-box .panel-bd .nav a {
-		height: 24px;
-		line-height: 24px;
-		width: 75px;
-		display: inline-block;
-		overflow: hidden;
-		margin-right: 10px;
-		color: #666
-	}
-	.panel-box .panel-bd .nav a:hover {
-		color: #e3101e
-	}
-	.panel-box .panel-bd .nav a.cur {
-		color: #e3101e;
-		text-decoration: underline
-	}
-	.panel-box .panel-bd .nav a.active {
-		background-color: #eef1ff;
-		margin: 0 10px 5px 0;
-		padding: 0 4px;
-		width: auto
-	}
-	.panel-box .panel-sbbox a {
-		width: 59px
-	}
-
-
-
-	.panel-list {
-		padding: 15px 10px
-	}
-	.panel-list li {
-		vertical-align: bottom;
-		text-align: center;
-		margin-top: -1px
-	}
-	.panel-list li h2 {
-		color: #666;
-		font-family: "新宋";
-		text-align: left;
-		word-break: break-all;
-		height: 36px;
-		overflow: hidden;
-		margin: 5px auto
-	}
-	.panel-list li a:hover .text,
-	.panel-list li a:hover,
-	.panel-list li h2:hover {
-		text-decoration: underline;
-		color: #e3101e
-	}
-	.panel-list li p {
-		font-weight: 400;
-		font-size: 18px;
-		text-align: left;
-		font-family: arial;
-		margin-top: 7px
-	}
-	.panel-list li p.price {
-		color: #e3101e;
-		font-family: arial;
-	}
-	.panel-list li a .text {
-		color: #666;
-		font-family: "新宋";
-		height: 40px;
-		line-height: 20px;
-		overflow: hidden;
-		text-align: left;
-	}
-
-
-	.panel-tab-hd {
-		margin-top: 10px;
-		width: 190px;
-		height: 30px;
-		line-height: 30px;
-		position: relative;
-		border-bottom: 1px solid #ccc;
-		background: #f3f3f3
-	}
-
-	.panel-tab-hd a {
-		width: 60px;
-		display: inline-block;
-		text-align: center;
-		font-family: "microsoft yahei";
-		color: #666
-	}
-
-	.panel-tab-hd a.cur {
-		font-family: "microsoft yahei";
-		color: #e3101e;
-		text-decoration: none;
-		font-weight: 600;
-		border: 1px solid #ccc;
-		background: #fff
-	}
-
-	.panel-tab-bd {
-		margin-top: -2px;
-		overflow: hidden;
-		position: relative;
-		min-height: 426px
-	}
-	.panel-tab .flag_active {
-		top: 29px;
-		position: absolute;
-		height: 0;
-		line-height: 0;
-		font-size: 0;
-		overflow: hidden;
-		width: 62px;
-		left: 0;
-	}
-	.panel-tab .temp_1 {
-		height: 6px;
-		position: relative;
-		z-index: 1;
-		background: #fff;
-	}
-	.panel-tab .liners {
-		position: absolute;
-		color: #ccc;
-	}
-	.panel-tab .dn{
-		display:none;
-	}
-
-
-	.tonglei_ul {
-		display: none
-	}
-
-	.tonglei_ul li {
-		position: relative;
-		padding: 10px 0;
-		border-top: 1px solid #eee;
-		height: 50px
-	}
-
-	.tonglei_ul .tonglei_link {
-		width: 96px;
-		margin-left: 82px;
-		line-height: 18px
-	}
-
-	.tonglei_ul .tonglei_link_name {
-		height: 36px;
-		overflow: hidden
-	}
-
-	.tonglei_ul .tonglei_link_name a {
-		font-family: "microsoft yahei";
-		color: #404040;
-		text-decoration: none;
-		cursor: pointer;
-		outline: 0;
-		font-weight: 400;
-	}
-
-	.tonglei_ul .tonglei_sz {
-		width: 12px;
-		height: 12px;
-		line-height: 12px;
-		background: #fff;
-		text-align: center;
-		font-size: 10px;
-		color: #E20F20;
-		position: absolute;
-		border: 1px solid #DDD;
-		top: 10px;
-		left: 0
-	}
-
-	.tonglei_ul .tonglei_img {
-		width: 50px;
-		height: 50px;
-		position: absolute;
-		top: 10px;
-		left: 22px
-	}
-
-	.tonglei_ul .tonglei_jg_val {
-		font-family: Arial;
-		color: #e3101e;
-		font-weight: 700
-	}
-
-	</style>
+	<link rel="stylesheet" href="./css/gmprdui.css" />
 </head>
 <body>
+<div class="wbox">
+	<div style="height:500px;background-color:#eee;"></div>
+</div>
+
+
 <div class="wbox" style="margin-top:20px;">
     <div class="dt-side">
 
@@ -421,11 +180,56 @@
 
 	</div>
 	<div class="dt-main">
-       右侧内容
+		<div id="prdDesc" class="prdDescOut">
+			<div id="gfixed"></div>
+			<div id="fixtabox" class="pdtl-tab">
+				<ul class="prdtitbox" id="prd_tbox">
+					<li class="cur">
+						<a href="javascript:;">商品详情</a>
+					</li>
+					<li>
+						<a href="javascript:;">规格与包装</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="pingjia_header">商品评价<span class="c00">（3）</span></a>
+					</li>
+				</ul>
+			</div>
+			<ul class="pedmainbox" id="prd_data">
+				<li style="height:200px;background:#eee;">商品详情商品详情</li>
+				<li style="height:300px;background:#d8d8d8;">规格与包装规格与包装</li>
+				<li style="height:200px;background:#ddd;">商品评价商品评价</li>
+           </ul>
+		</div>
+        <div style="height:800px;background-color:#f0f0f0;"></div>
+		<div style="height:1000px;background-color:#ddd;"></div>
 	</div>
 </div>
 
-<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>  
+<script src="../gmlib/ui/gfixed/1.0.0/gfixed.js"></script>
+<script src="../gmlib/ui/gtabs/1.0.0/gtabs.js"></script>
+<script>
+$("#fixtabox").gfixed({
+	star:"#gfixed",
+	target:"#fixtabox",
+	fixed:"fixed-top"
+});
+
+var gTabsFn=function(){
+	if($('#fixtabox').hasClass("fixedtop")){
+		$("html,body").animate({scrollTop:$("#gfixed").offset().top},100);
+	}
+}
+$('#prdDesc').gTabs({
+	btnID:"#prd_tbox",
+	boxID:"#prd_data",
+	bind:'click',
+	hEven: gTabsFn,
+	hide:1
+});
+</script>
 
 </body>
 </html>  

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>自动计数 gAutoCounts</title>
+
+</head>
+<body>
+<textarea name="" style="width:400px;height:200px" id="quesTxt" class="txt-area"></textarea>
+<div class="tips">0/200</div>
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="./js/gautocounts.js"></script>
+<script>
+$("#quesTxt").gAutoCounts({
+    maxLen: 200,
+    //tip : ".tips",
+    onChange : function(g){
+        $(".tips").text(g.curValue+"/"+g.options.maxLen);
+        console.log(g.curValue)
+    }
+})
+</script>
+</body>
+</html>  
