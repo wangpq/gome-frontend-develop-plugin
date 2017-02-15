@@ -1,0 +1,107 @@
+.gui-select{  
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	position: relative; 
+	font-size: 12px;  
+	vertical-align: middle;
+	line-height: 0px;
+} 
+.gui-select .gui-select-with-arrow{
+	display: none;
+} 
+.gui-select-with-arrow.cart-guarantee .gui-select-arrow{
+	display: block;
+	border-color:#666 #fff #fff;
+	border-width: 4px 4px 0;
+	border-style:solid;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+	right: 6px;
+	top: 50%;
+	margin-top: -3px;
+
+	width:9px;
+	height: 9px;
+} 
+.gui-select-with-arrow .gui-select-arrow{
+	display: block;
+	border-color:#666 #fff #fff;
+	border-width: 4px 4px 0;
+	border-style:solid;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+	right:6px;
+	top: 50%;
+	margin-top: -3px;
+}
+.gui-select a{
+	text-decoration: none;
+	color: #333;
+}
+.gui-select .gui-select-text{ 
+	display: inline-block;
+	_display: inline;
+	_zoom: 1;
+	padding: 0 5px;
+	height: 25px; 
+	line-height: 25px;
+	border: 1px solid #eee;
+	overflow: hidden;  
+	cursor: default; 
+	position: relative;
+	background: #fff;  
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+}
+.gui-select-with-arrow .gui-select-option{
+	line-height: 20px;
+}
+.gui-select-with-arrow .gui-select-text,
+.gui-select-with-arrow .gui-select-option{
+	padding-right: 25px;  
+}
+.gui-select-open .gui-select-text,
+.gui-select-open .gui-select-arrow{ 
+	z-index: 10;   
+}
+.gui-select .gui-select-text:hover,.gui-select-open .gui-select-text{
+ 	border: 1px solid #ddd;
+ 	text-decoration: none;
+}
+.gui-select-open .gui-select-text,.gui-select-open .gui-select-text:hover{
+	/* border-bottom: none; */
+	margin-bottom: 1px;
+}
+.gui-select-options-wrap{
+	position: absolute;
+	left: 0;
+	top: 30px; 
+	display: none;
+	white-space:nowrap;  
+	background: #fff;
+	box-shadow: #ccc 0 0 1px;
+	min-width: 100%;
+	_width:expression((this.clientWidth < this.parentElement.clientWidth) ? this.parentElement.clientWidth : "auto" );
+}
+.gui-select-options{
+	border: 1px solid #ddd;
+	overflow: hidden;
+}
+.gui-select-options a{
+	overflow: hidden;
+	padding: 5px; 
+	text-overflow: ellipsis;
+} 
+.gui-select-options a:hover{
+	background: #F1F1F1;
+	text-decoration: none;
+}
+.gui-select-option{
+	display: block;
+	cursor: default;
+} 

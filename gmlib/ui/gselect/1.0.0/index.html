@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>widget</title>
+	<link rel="stylesheet" href="/??gmlib/ui/gselect/1.0.0/gselect.css">
+</head>
+<body> 
+	啥也没有的下拉框
+	<hr>
+	<div gui-widget="select"class="gui-select">
+		<select name="" id="">
+			<option value="1">测试用的test1</option>
+			<option value="2">测试用的fsdafsadfsdaf2</option>
+			<option value="3">测试用的测试用的fsdafsadfsdaf22d3</option>
+			<option value="4">测试用的4</option>
+		</select>
+	</div>
+	<hr>
+	<br><br><br><br>
+	带箭头的下拉框
+	<hr>
+	<div gui-widget="select"class="gui-select gui-select-with-arrow">
+		<select name="" id="">
+			<option value="1">测试用的test1</option>
+			<option value="2">测试用的fsdafsadfsdaf2</option>
+			<option value="3">测试用的测试用的fsdafsadfsdaf22d3</option>
+			<option value="4">测试用的4</option>
+		</select>
+	</div>
+	<hr>
+	<br><br><br><br>
+	固定宽度的下拉框
+	<hr>
+	<div gui-widget="select"class="gui-select gui-select-width100">
+		<select name="" id="">
+			<option value="1">测试用的test1</option>
+			<option value="2">测试用的fsdafsadfsdaf2</option>
+			<option value="3">测试用的测试用的fsdafsadfsdaf22d3</option>
+			<option value="4">测试用的4</option>
+		</select>
+	</div>
+	<hr>
+	<br><br><br><br>
+	带箭头的下拉框
+	<hr>
+	<div gui-widget="select"class="gui-select gui-select-with-arrow gui-select-width100">
+		<select name="" id="">
+			<option value="1">测试用的test1</option>
+			<option value="2">测试用的fsdafsadfsdaf2</option>
+			<option value="3">测试用的测试用的fsdafsadfsdaf22d3</option>
+			<option value="4">测试用的4</option>
+		</select>
+	</div> 
+
+
+	<hr>
+	<br><br><br><br>
+	带箭头、带icon、宽度100px的下拉框
+	<hr>
+	<div gui-widget="select"class="gui-select gui-select-with-arrow gui-select-width100">
+		<select name="" id="">
+			<option value="1" data-icon-class="icon-test">测试用的test1</option>
+			<option value="2" data-icon-class="icon-test2">测试用的fsdafsadfsdaf2</option>
+			<option value="3">测试用的测试用的fsdafsadfsdaf22d3</option>
+			<option value="4">测试用的4</option>
+		</select>
+	</div> 
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<style>
+	.gui-select-width100 .gui-select-text{ 
+		width: 100px;
+	}
+	.icon-test,.icon-test2{
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		_display: inline;
+		_zoom: 1;
+		vertical-align: middle;
+		background: red;
+		margin-right: 5px;
+		margin-top: -3px;
+		*margin-top: 0;
+		overflow: hidden;
+	}
+	.icon-test2{
+		background: black;
+	}
+	hr{
+		border: none;
+	}
+	</style>
+
+ 
+	<script src="/??/gmlib/jq/1.7.1/jquery.js,gmlib/ui/gselect/1.0.0/gselect.js"></script>
+	<script>
+	$.gSelect.bind();
+	$.gSelect.render(); 
+	</script>
+</body>
+</html>

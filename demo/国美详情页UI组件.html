@@ -12,9 +12,18 @@
 </head>
 <body>
 <div class="wbox">
-	<div style="height:500px;background-color:#eee;"></div>
+	<div style="min-height:500px;background-color:#e8e8e8;">
+		<h1>详情页头部</h1>
+	</div>
 </div>
 
+<div class="wbox">
+	<div style="min-height:500px;background-color:#eee;">详情页商品主体信息栏</div>
+</div>
+
+<div class="wbox">
+	<div style="height:265px;background-color:#d8d8d8;">搭配购+其他类似商品</div>
+</div>
 
 <div class="wbox" style="margin-top:20px;">
     <div class="dt-side">
@@ -206,29 +215,60 @@
 	</div>
 </div>
 
+<div class="wbox">
+	<div style="height:265px;background-color:#e8e8e8;">详情页页脚</div>
+</div>
 
 <script src="../gmlib/jq/1.7.1/jquery.js"></script>  
+<script src="../gmlib/ui/gload/1.0.0/gload.js"></script> 
 <script src="../gmlib/ui/gfixed/1.0.0/gfixed.js"></script>
+<script src="../gmlib/ui/tabs/1.0.0/tabs.js"></script>
 <script src="../gmlib/ui/gtabs/1.0.0/gtabs.js"></script>
 <script>
-$("#fixtabox").gfixed({
-	star:"#gfixed",
-	target:"#fixtabox",
-	fixed:"fixed-top"
+var gmPrdApp={
+    gTabsFn : function(){
+		if($('#fixtabox').hasClass("fixedtop")){
+			$("html,body").animate({scrollTop:$("#gfixed").offset().top},100);
+		}
+	}  
+}
+
+$('#prdDesc').gLoad(function () { 
+	$('#prdDesc').gTabs({
+		btnID:"#prd_tbox",
+		boxID:"#prd_data",
+		bind:'click',
+		hEven: gmPrdApp.gTabsFn,
+		hide:1
+	});
+	$("#fixtabox").gfixed({
+		star:"#gfixed",
+		target:"#fixtabox",
+		fixed:"fixed-top"
+	});
 });
 
-var gTabsFn=function(){
-	if($('#fixtabox').hasClass("fixedtop")){
-		$("html,body").animate({scrollTop:$("#gfixed").offset().top},100);
-	}
-}
-$('#prdDesc').gTabs({
-	btnID:"#prd_tbox",
-	boxID:"#prd_data",
-	bind:'click',
-	hEven: gTabsFn,
-	hide:1
-});
+$('#paiHangBang').gLoad(function () { 
+	new Tabs({
+		titles: $('#panel-tab-hd a'),
+		contents: $('.panel-tab-bd .tonglei_ul'),
+		//click: true,
+		hover: true,
+		activefn: function (index) {
+			if(index==0){
+				$('#panel-tab-hd i').removeClass('dn').eq(0).addClass('dn');
+			}else if(index==1){
+				$('#panel-tab-hd i').addClass('dn');
+			}else if(index==2){
+				$('#panel-tab-hd i').removeClass('dn').eq(1).addClass('dn');
+			}
+			this.titles.removeClass('cur');
+			this.titles.eq(index).addClass('cur');
+			this.contents.hide();
+			this.contents.eq(index).show();
+		}
+	});
+});		
 </script>
 
 </body>
