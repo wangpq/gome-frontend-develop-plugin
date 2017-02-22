@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+/***门店付款弹层***/
+.content_area{border:1px solid #cccccc; background:#ffffff; padding:10px 19px; width:480px; position:relative; font-family:"microsoft yahei";}
+.content_area a{ text-decoration:none; color:#5e5e5e;}
+.content_area .borderj{position:absolute;top:-7px;right:77px;}
+.content_area .gm-store{ position:relative; width:480px; margin-bottom:10px; }
+.content_area .gm-store .store-hd { overflow:hidden;}
+.content_area .gmtab{ border-bottom: 1px solid #cccccc; float: left; height: 25px;overflow: visible; width: 100%;}
+.content_area .gmtab-ched li a{cursor: pointer;float: left;height: 23px;line-height: 23px;margin-right: 3px;padding: 0 21px 1px 20px;border-image: none; position: relative; text-align: center;}
+.content_area .gmtab li{ float:left; text-align: center; margin:0px;}
+.content_area .gmtab li a{cursor: pointer;float: left;height: 23px;line-height: 23px;margin-right: 3px;padding: 0 21px 1px 20px;border-image: none; position: relative; text-align: center; }
+.content_area .gmtab li a i{display: block; position: absolute;top: 10px;right: 4px;}
+/******点选中门店的样式******/
+.content_area .gmtab a.hover{height:24px;line-height: 22px; padding: 0 21px 1px 20px; text-decoration: none;border-image: none; border:1px solid #cccccc; border-bottom:none; background:#ffffff;color:#f75964;_height:26px;}
+.content_area .gmtab .hover i,.gm-store .gmtab .checkmd i {display: block; position: absolute;top: 10px;right: 4px;}
+/**选完后点击修改的样式******/
+.content_area .gmtab a.checkmd{height:24px;line-height: 22px; padding: 0 21px 1px 20px;  background:#ffffff;color:#f75964;}
+.content_area .area-list{padding-top: 5px; overflow:hidden;}
+.content_area .area-list li{ float:left; width:147px; padding:2px 0 2px 13px; margin-right:0px;}
+.content_area .area-list li a{ float: left; padding:2px 4px;}
+.content_area .area-list li a:hover{ color:#ffffff; background:#f75964;}
+/**按钮鼠标划过效果***/
+.content_area .nBtn-r:hover,.nBtnOK:hover{ color:#ffffff; background:#dd424d;}
+/***关闭窗口***/
+.content_area .store_closed{display:block; cursor:pointer; position:absolute; right:10px;}
+
+/**选择门店之后**/
+.gm-store .gmtab_nbd{ border-bottom:none; }
+.gm-store .gmtab_nbd a.hover{ border:none;}
+
+
+
+
+
+
+
+
+
+
+
+

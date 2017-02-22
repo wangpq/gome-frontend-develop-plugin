@@ -1,0 +1,39 @@
+@charset "utf-8";
+/**库存**/
+.cityShow,.prdRight .city{position:relative;z-index:1000;}
+.cityShow .gCity{display:block;}
+.regon{position: relative;padding:1px 20px 1px 1px;line-height:20px;height:22px;color:#0172D0;border:1px solid #e5e5e5;display:inline-block;background:#fff;}
+.regon a{background:#FFF;border:0;padding:0 0 0 5px;text-decoration:none;height:22px;line-height:22px;float:left;overflow:hidden;max-width:248px;}
+.regon a.kucun{border-right:1px solid #dedede;display:inline-block;}
+.regon i{position: absolute;right: 1px;top: 10px;width:0px;height:0px;display:inline-block;border:4px dashed #fff;border-color:#666566 transparent transparent transparent;
+		border-bottom:0px;border-top-style:solid;margin:0 5px;vertical-align:middle;overflow:hidden;}
+.regon .space{background:#fff;display:block;height:10px;position:absolute;width:100%;z-index:3;display:none;left:0;top: 20px;}
+.regon.gctCur .space{display:block;*display:none;}
+.gctCur{position:relative;z-index:3;border-bottom:0;height:23px;box-shadow:0 -2px 8px 0 lightgray;}
+.gctCur a{color:#069;}
+.gCity{position:absolute;top:27px;*top:25px;left:0;width:520px;background:#fff;border:1px solid #dedede;box-shadow:0 0 5px 1px lightgray;overflow:hidden;z-index:999;display:none;padding:10px;}
+.gCity a{color:#5e5e5e;background:#fff;text-overflow:ellipsis;white-space:nowarp;text-decoration:none;overflow:hidden;}
+.gCity a:hover{color:#069;background:none;text-decoration:none;}
+.gctBox{width:100%;margin:8px 0 0;line-height:50px;text-align:center;color:#ccc;}
+.gctBox a{line-height:26px;padding:3px 5px;}
+.gctBox a:hover{background:#c00;color:#fff;}
+/*.gctBox a.select{background:#c00;color:#fff;}*/
+.gctBox span{width:95px;height:26px;line-height:26px;padding-left:8px;float:left;overflow:hidden;text-align:left;white-space:nowrap;text-overflow:ellipsis;}
+#ctbox_3 span{overflow:visible;padding-right:25px;width:auto;}
+.gctSelect{border-bottom:1px solid #e6e6e6;}
+.gctSelect a{float:left;border:1px solid #fff;border-bottom:1px solid #e6e6e6;color:#069;padding:0 0 0 10px;height:25px;line-height:25px;overflow:hidden;position:relative;z-index:1;bottom:-1px;}
+.gctSelect a:hover{color:#069;}
+.gctSelect a.cur{border-color:#e6e6e6;border-bottom:1px solid #fff;color:#f00;}
+.gctSelect a b,.gctSelect a i{font-weight:normal;float:left;}
+.gctSelect a i{width:6px;height:4px;display:inline-block;overflow:hidden;background:url(/gmlib/unit/gcity/1.0.0/ui.png) 0 -12px no-repeat;margin:11px 5px 0;}
+.gctSelect a.cur i{background-position:-6px -12px;}
+.gctSelect a.close{width:12px;height:12px;float:right;background:url(/gmlib/unit/gcity/1.0.0/ui.png) no-repeat;padding:0;border:0;}
+.gctSelect a.close:hover{background-position:-12px 0;}
+.w990 .regon a{
+	max-width: 265px;
+	_width:expression((document.documentElement.clientWidth||document.body.clientWidth)>265?"265px":"");
+	white-space: nowrap;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
