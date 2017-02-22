@@ -47,11 +47,10 @@
   示例： http://wangpq.github.io/gome-frontend-develop-plugin/demo/自定义事件触发器%20observer.html
   
   
-  ### 综合示例
-   
-   将几个比较常用的插件使用到了这个示例页面中！ 
+### 综合示例
+  将几个比较常用的插件使用到了这个示例页面中！ 
 
-   链接： http://wangpq.github.io/gome-frontend-develop-plugin/demo/国美详情页UI组件.html
+  链接： http://wangpq.github.io/gome-frontend-develop-plugin/demo/国美详情页UI组件.html
   
   
   
