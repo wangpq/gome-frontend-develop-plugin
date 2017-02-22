@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <title>楼层横导航horiNavBar</title>
+	<link rel="stylesheet" href="../gmlib/reset/1.1.0/reset.css" />
+	<link rel="stylesheet" href="./css/horinavbar.css" />
+	<style>
+		.floor{height:400px;}
+	</style>
+</head>
+<body>
+
+<!-- 横导航 -->
+<div class="fixed-bar-wrap">
+	<div class="fixed-bar" style="left: 0px;">
+		<div class="wrapper">
+			<div class="name"></div> <i></i>
+			<ul class="floors-item">
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 楼层 -->
+<div class="floor" id="J-floor-1" style="background:red"><h2>食品饮料</h2></div>
+<div class="floor" id="J-floor-2" style="background:green"><h2>粮油副食</h2></div>
+<div class="floor" id="J-floor-3" style="background:pink"><h2>美容护肤</h2></div>
+<div class="floor" id="J-floor-4" style="background:yellow"><h2>清洁</h2></div>
+<div class="floor" id="J-floor-5" style="background:blue"><h2>母婴</h2></div>
+
+
+
+<script src="../gmlib/jq/1.7.1/jquery.js"></script>
+<script src="../gmlib/ui/horinavbar/1.0.0/horiNavBar.js"></script>
+<script>
+	$(".fixed-bar").horiNavBar();//横导航
+</script>
+
+
+</body>
+</html>  

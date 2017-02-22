@@ -13,6 +13,230 @@
 	display: _inline
 }
 
+.prd-main-l,
+.prd-main-r{
+   float:left; 
+}
+
+.category-box {
+    height: 38px;
+    border-bottom: 2px solid #d7000f
+}
+
+.category {
+    height: 38px
+}
+
+.category a:hover {
+    text-decoration: none
+}
+
+.sidecategory {
+    position: relative;
+    z-index: 995
+}
+
+.sidecategory h2 {
+    width: 200px;
+    height: 38px;
+    background: #d7000f;
+    float: left;
+    opacity: .9;
+    filter: Alpha(opacity=90)
+}
+
+.sidecategory h2 a {
+    color: #fff;
+    font-family: 'Microsoft YaHei';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    padding-left: 15px;
+    float: left
+}
+
+.sidecategory h2 span {
+    float: right;
+    display: block;
+    margin: 14px 17px;
+    width: 18px;
+    height: 12px;
+    background: url(/gmpro/1.0.0/public/1.0.0/css/i/ui.png) 0 -1344px;
+    overflow: hidden
+}
+
+.sidecategory h2.hover span {
+    background-position: 0 -1344px
+}
+
+.sidecategory .lisbg {
+    opacity: .9;
+    filter: Alpha(opacity=90);
+    width: 200px;
+    height: 450px;
+    color: #333;
+    background: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none
+}
+
+.sidecategory .lisnav {
+    width: 200px;
+    height: 450px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    _left: -200px;
+    z-index: 9999;
+    display: none
+}
+
+.sidecategory .lisnav-ul {
+    position: relative;
+    z-index: 9999
+}
+
+.sidecategory .lisnav li {
+    _height: 30px;
+    _position: relative;
+    _overflow: hidden
+}
+
+.sidecategory .lisnav h3 {
+    position: relative;
+    padding-left: 15px;
+    height: 30px;
+    line-height: 30px;
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 1px
+}
+
+.sidecategory .lisnav h3 a {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei',arial;
+    font-weight: 200;
+    display: inline-block;
+    *margin-right: 0;
+    margin-right: 3px
+}
+
+.sidecategory .lisnav li.bgw {
+    background: #fbfbfb;
+    margin-left: 1px;
+    _margin-left: 0;
+    *margin-left: 0;
+    width: 200px;
+    _width: 202px
+}
+
+.sidecategory .lisnav li.bgw h3 a {
+    color: #333
+}
+
+.sidecategory .lisnav li.bgw h3 a:hover {
+    color: #e3101e
+}
+
+.sidecategory .lisnav .line {
+    display: none;
+    height: 1px;
+    width: 181px;
+    background: #fff;
+    opacity: .07;
+    filter: Alpha(opacity=7);
+    position: absolute;
+    top: 0;
+    left: 15px;
+    overflow: hidden
+}
+
+.sidecategory .lisnav li.lst,.sidecategory .lisnav li.first {
+    height: 29px;
+    line-height: 29px;
+    overflow: hidden
+}
+
+.sidecategory .lisnav li.first {
+    margin-top: 1px
+}
+
+.sidecategory .subnav {
+    background-color: #fff;
+    min-height: 448px;
+    _height: 448px;
+    max-height: 515px;
+    border-left: none;
+    position: absolute;
+    top: 0;
+    left: 199px;
+    z-index: 99;
+    width: 1000px;
+    display: none
+}
+
+.w990 .subnav {
+    width: 789px
+}
+
+.w1000 .subnav {
+    width: 799px
+}
+
+.mainnav {
+    float: left;
+    height: 38px;
+    width: 800px;
+    overflow: hidden;
+    position: relative
+}
+
+.w990 .mainnav {
+    width: 790px
+}
+
+.mainnav li {
+    position: relative;
+    float: left;
+    padding: 0 16px;
+    text-align: center;
+    line-height: 38px;
+    white-space: nowrap
+}
+
+.mainnav li.hide {
+    display: none
+}
+
+.mainnav li a {
+    color: #000;
+    font-size: 15px;
+    line-height: 40px;
+    font-family: 'Microsoft YaHei'
+}
+
+.mainnav li a:hover {
+    color: #d7000f
+}
+
+.mainnav li.cur a,.mainnav li a:hover {
+    color: #d7000f
+}
+
+.sidecategory .dropDownMenu{
+	width: 200px;
+	height: 450px;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	z-index: 9999;
+	display: none;
+}
 
 /* 面板框 */
 .panel-box {
@@ -256,4 +480,5 @@
 .pdtl-tab .prdtitbox .cur a {
 	color: #e3101e
 }
+
 

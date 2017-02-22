@@ -8,10 +8,16 @@
     <meta name="description" content="description">
     <title>倒计时 gTimer</title>
     <style>
+    /*demo1*/
 	.countdown {color:#333;font:20px/1 Arial,"\5b8b\4f53"}
 	.countdown i {font-style:normal;font:14px/20px Arial;display:inline-block;width:20px;height:20px;background:#333;color:#fff;text-align:center;margin:0 2px}
 	.countdown b {font:400 12px/20px Arial;color:#c00}
 	.countdown-vertical b {display:block;line-height:30px}
+
+    /*demo2*/  
+    .timebox,.timebox1{color:#333;font:14px/1 Arial,"\5b8b\4f53";}
+    .timebox i,.timebox1 i {font-style:normal;font:14px/20px Arial;display:inline-block;padding:2px 3px;background:#333;color:#fff;text-align:center;margin:0 2px}
+
     </style>
 </head>
 <body>
@@ -26,6 +32,12 @@
     <i>15</i>:<i>20</i>:<i>15</i>
     <b>限量5件</b>
 </div>
+
+<br><br>
+
+<div class="timebox"><i>00</i>小时<i>00</i>分<i>00</i>秒</div>
+<br>
+<div class="timebox1"><i>00</i>天<i>00</i>时<i>00</i>分<i>00</i>秒</div>
 
 <script src="../gmlib/jq/1.7.1/jquery.js"></script>
 <script src="../gmlib/unit/gtime/1.0.0/gtime.js"></script>
@@ -66,6 +78,47 @@
             $('#demo .time').html("已经结束");
         }
     });
+
+
+;(function(){
+    //@param {cT:当前时间(毫秒),eT:截止时间（毫秒）,gap:间隔(毫秒),aEven:到点触发的事件function,iEven:初始化函数，初始化时被调用,lEven:倒计时结束触发方法}
+    var  currentT = (new Date()).getTime();
+    var  endT = Number(currentT)+100000000000;
+    function toDubble(n){//空位补0
+        if(n<10){
+            return '0'+n;
+        }else{
+            return ''+n;
+        }
+    };
+    $.gTimer({
+        ct: currentT,//currentT当前时间，项目中请求服务器时间，时间戳格式
+        et: endT,//endT结束时间，项目中是异步请求来的，时间戳格式
+        aEven: function() {
+            if (this.ct >= this.et) {
+                return;
+            }
+            var dd = toDubble(Number(this.dt.format('$dd')));
+            var hh = toDubble(Number(this.dt.format('$hh')));
+            var mm = toDubble(Number(this.dt.format('$mm')));
+            var ss = toDubble(Number(this.dt.format('$s')));
+            //(dd>100)&& ( dd =dd%100);
+            if (dd > 0) {
+                var changeHour=Number(dd*24)+Number(hh);//不管多少天都显示小时数
+                $(".timebox").html('<i>' + changeHour + '</i>时<i>' + mm + '</i>分<i>' + ss + '</i>秒');//不管多少天都显示小时数
+                $(".timebox1").html('<i>' + dd + '</i>天<i>' + hh + '</i>时<i>' + mm + '</i>分<i>' + ss + '</i>秒');//天：时：分：秒
+            } else {
+                $(".timebox").html('<i>' + hh + '</i>:<i>' + mm + '</i>:<i>' + ss + '</i>');
+            }
+        },
+        lEven: function() { //occur once end抢购结束
+            $(".timebox").html('<i> 00 </i>:<i>00</i>:<i>00</i>');
+            //抢购结束执行的回调函数
+        }
+    });
+})()
+
+    
 </script>
 </body>
 </html>  
