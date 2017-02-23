@@ -244,6 +244,13 @@
 	border: 1px solid #eee;
 	margin-bottom: 10px
 }
+.panel-box.noborder{
+	border: none;
+	width: 210px;
+}
+.panel-box.fluid{
+	width: 100%;	
+}
 .panel-box .panel-hd{
 	height: 36px;
 	padding-left: 10px;

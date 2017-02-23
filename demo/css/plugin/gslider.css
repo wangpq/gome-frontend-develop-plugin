@@ -7,14 +7,24 @@
 	margin-bottom: 10px;
 }
 
-.gslider h3,
-.gslider-list h3 {
+.gslider .hd,
+.gslider-list .hd {
 	height: 36px;
 	padding-left: 10px;
 	position: relative;
 	color: #666;
 	font: 600 12px/36px 'microsoft yahei';
 	background: #f6f6f6
+}
+.gslider .hd .title{
+   float:left;
+}
+.gslider .hd .r{
+   float:right;
+}
+.gslider .hd .r.opt{
+   cursor :pointer;
+   padding:0 10px;
 }
 
 .gslider .pushul {
