@@ -18,13 +18,39 @@ var gmPrdApp={
             scrollTop: $("#appraisalContent").offset().top-36
         },80);
 	},
+	/* 浏览最终购买 */
+	lookToBuy : function(data){
+		if (!(data.isSuccess=="Y" && data.size>0)){
+			$('#lookToBuy').hide();
+			return false;
+		}
+		var tpl = '\
+			<h2 class="panel-hd"><%=bn %></h2>\
+			<div class="panel-bd">\
+				<ul class="panel-list">\
+					<% for(var i=0,j=lst.length; i<j; i++){ \
+						var prd = lst[i];\
+					%>\
+					<li>\
+						<a href="http:<%= prd.purl %>" target="_blank" title="<%= pn %>">\
+							<img width="160" height="160" src="http:<%= prd.iurl %>" alt="<%= prd.pn %>" /> \
+							<p class="price">¥<span><%= prd.price %></span></p>\
+							<div class="text"><%= prd.pn %></div>\
+						</a>\
+					</li>\
+					<% } %>\
+				</ul>\
+			</div>\
+			';
+		$('#lookToBuy').attr('maima_param',data['maima_param']).html(template.compile(tpl)(data));
+	},
 	/* 根据浏览猜你喜欢 */
 	guessLickFn: function(data){
 		if (!(data.isSuccess=="Y" && data.size>0)){
 			$('#guessLike').hide();
 			return false;
 		}
-		var htm = '\
+		var tpl = '\
 			<div class="hd">\
 				<h3 class="title">根据浏览猜你喜欢</h3>\
 				<div id="btn-change" class="r opt"><span class="text">换一组</span><i class="i-refresh"></i></div>\
@@ -52,7 +78,7 @@ var gmPrdApp={
 		var products = ""
 		  , tlscroll = $('body').hasClass('w990') ? 5 : 6;
 		template.helper('bigData', function (pid) { products += pid; });
-		$('#guessLike').addClass("gslider").attr('maima_param',data.maima_param).html(template.compile(htm)(data));
+		$('#guessLike').addClass("gslider").attr('maima_param',data.maima_param).html(template.compile(tpl)(data));
 
 		if (typeof trackEvent != "undefined") { trackEvent(2, products); }
 
@@ -129,6 +155,21 @@ $('.comment-box').gLoad(function () {
 		}
 	});
 });
+
+
+/** 浏览最终购买 **/
+$('#lookToBuy').gLoad(function () { 
+    var ajaxUrl='http://bigd.gome.com.cn/gome/rec?callback=lookToBuy_533699952065944&boxid=box13&pid=9134032698&cid=148782107819554661&uid=73177163700&area=11010200&brid=10000010&imagesize=160&c1id=cat10000004&c3id=cat10000049&shopid=&sid=1123030306&_=1487921237756';
+	$.ajax({
+		type : "get",
+		url : ajaxUrl,
+		dataType : "jsonp",
+		//data : {},
+		jsonpName : "lookToBuy_533699952065944"
+	}).done(function(data){
+        gmPrdApp.lookToBuy(data);
+    });
+});	
 
 
 /** 排行榜 **/
