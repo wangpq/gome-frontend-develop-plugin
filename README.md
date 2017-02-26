@@ -1,4 +1,4 @@
-# gome-frontend-develop-plugin
+# wangpq-gome-frontend-develop-plugin
 国美前端开发UI和控件
 
 ## 介绍
